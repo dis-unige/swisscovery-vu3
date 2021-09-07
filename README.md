@@ -1,10 +1,10 @@
-# primo-explore-eth-openurl-interlibrary
+# primo-explore-eth-metagrid
 
 ## Description
 
 This Module integrates Metagrid into Primo VE.
 It extracts the GND IDs (by default in lds03) and queries the Metagrid API with it.
-With the whitelist (to be changed in the variable sourcesWhitelist) the result is filtered and the links sorted by person are inserted in the links section.
+With the whitelist (to be changed in the variable sourcesWhitelist) the result is filtered and the links sorted by person are inserted into the links section.
 
 ### Screenshot
 
