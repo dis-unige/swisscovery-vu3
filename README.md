@@ -9,7 +9,7 @@ With the whitelist (to be changed in the variable sourcesWhitelist) the result i
 ### Screenshot
 
 #### Metagrid links
-![screenshot](https://gitlab.com/ethlibrary/primo-explore-modules/primo-explore-metagrid/-/raw/master/screenshot1.jpg)
+![screenshot](https://gitlab.com/ethlibrary/primo-explore-modules/primo-explore-eth-metagrid/-/raw/master/screenshot1.jpg)
 
 ## Installation
 
