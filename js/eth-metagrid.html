@@ -1,0 +1,32 @@
+<div class="eth-metagrid-links" ng-repeat="(id, item) in $ctrl.persons">
+    <div ng-if="(item.metagridLinks && item.metagridLinks.length > 0)">
+        <div class="section-head">
+            <div layout="row" layout-align="center center" class="layout-align-center-center layout-row">
+                <h4 class="section-title md-title light-text">
+                    {{item.name}}
+                    <span class="eth-metagrid-poweredby">
+                        (Links powered by
+                        <a target="_blank" href="https://www.metagrid.ch/">
+                            Metagrid
+                            <prm-icon external-link="" icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>                            
+                        </a>)
+                    </span>
+                </h4>
+                <md-divider flex></md-divider>
+           </div>
+        </div>
+        <div class="section-body">
+            <div  class="spaced-rows">
+                <div ng-repeat="link in item.metagridLinks">
+                    <div>
+                       <a target="_blank" class="arrow-link" href="{{link.url}}">
+                            {{link.label}}
+                            <prm-icon external-link="" icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+                            <prm-icon link-arrow external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="chevron-right"></prm-icon>
+                       </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "name": "primo-explore-eth-metagrid",
+  "main": "js/eth-metagrid.module.js",
+  "description": "integrates metagrid api into primo VE",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/ethlibrary/primo-explore-modules/primo-explore-eth-metagrid"
+  },
+  "author": "Bernd Uttenweiler <bernd.uttenweiler@library.ethz.ch>",
+  "version": "0.0.1",
+  "keywords": [
+    "primo-explore"
+  ]
+}
