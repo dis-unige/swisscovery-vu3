@@ -4,7 +4,10 @@
 
 This Module integrates Metagrid into Primo VE.
 It extracts the GND IDs (by default in lds03) and queries the Metagrid API with it.
-With the whitelist (to be changed in the variable sourcesWhitelist) the result is filtered and the links sorted by person are inserted into the links section.
+With the whitelist the result is filtered and the links sorted by person are inserted into the links section.
+The whitelist of providers whose links should be displayed can be changed in eth-metagrid.config.js. The array contains the slug of the respective provider (https://api.metagrid.ch/providers.json).
+When you add a slug, you must also add the labels in the eth-metagrid.config.js (providers.json: 'short_description').
+
 
 ### Screenshot
 

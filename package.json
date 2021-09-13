@@ -7,7 +7,7 @@
     "url": "https://gitlab.com/ethlibrary/primo-explore-modules/primo-explore-eth-metagrid"
   },
   "author": "Bernd Uttenweiler <bernd.uttenweiler@library.ethz.ch>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "primo-explore"
   ]

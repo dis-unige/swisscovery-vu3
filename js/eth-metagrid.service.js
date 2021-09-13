@@ -13,7 +13,7 @@ export const ethMetagridService = ['$http', '$sce', function($http, $sce){
                 },
                 function(httpError){
                     if (httpError.status === 404)return null;
-                    let error = "an error occured: LOD metagridService callback: " + httpError.status;
+                    let error = "an error occured: ethMetagridService callback: " + httpError.status;
                     if (httpError.data && httpError.data.errorMessage) {
                         error += ' - ' + httpError.data.errorMessage;
                     }
