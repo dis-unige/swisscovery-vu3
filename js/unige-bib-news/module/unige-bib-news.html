@@ -1,0 +1,23 @@
+<md-card class="cardbox default-card" ng-if="$ctrl.news.length > 0">
+    <md-card-title>
+        <md-card-title-text>
+            <h2 class="md-headline">{{::$ctrl.unigeConfigService.getLabel($ctrl.config, 'heading')}}</h2>
+        </md-card-title-text>
+    </md-card-title>
+    <md-card-content>
+        <div class="unige-news" ng-repeat="news in $ctrl.news">
+            <a target="_blank" rel="noopener" class="arrow-link" href="{{news.link}}" rel="external">
+                <span>{{$ctrl.decodeHtmlEntities(news.title)}}</span>
+                <prm-icon external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+                <prm-icon link-arrow external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="chevron-right"></prm-icon>
+            </a>
+        </div>
+        <div class="unige-all-news">
+            <a target="_blank" rel="noopener" class="arrow-link" rel="external" href="{{$ctrl.allNewsUrl}}">
+                <span>{{::$ctrl.unigeConfigService.getLabel($ctrl.config, 'all')}}</span>
+                <prm-icon external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="open-in-new"></prm-icon>
+                <prm-icon link-arrow external-link icon-type="svg" svg-icon-set="primo-ui" icon-definition="chevron-right"></prm-icon>
+            </a>
+        </div>
+    </md-card-content>
+</md-card>

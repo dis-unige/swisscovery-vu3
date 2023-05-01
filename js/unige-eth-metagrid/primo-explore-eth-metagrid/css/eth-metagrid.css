@@ -1,0 +1,9 @@
+.eth-metagrid-links{
+    margin-top: 2.5em;
+}
+.eth-metagrid-poweredby{
+    font-size:15px;
+}
+.eth-metagrid-poweredby a,.eth-metagrid-poweredby a md-icon{
+    color: #3d6e94!important;
+}

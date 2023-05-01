@@ -1,0 +1,244 @@
+<md-content>
+    <span flex translate='nui.message.announcement'></span>
+</md-content>
+
+<md-content>
+    <div class="ps_content md-padding" layout-gt-sm="row" layout-align="start start" style="padding-bottom: 0px;">
+        <div flex="0" flex-md="0" flex-lg="20" flex-xl="25"></div>
+        <div flex-sm="100" flex-md="100" flex-lg="60" flex-xl="50" flex="100" layout="column">
+                    <!--<div class="unige-alert-2">We are interested in your opinion about swisscovery! Take part in our survey and get the chance to win a voucher. <a href="https://survey.fhgr.ch/182488?lang=en" target="_blank">Click here to go to the survey</a></div>-->
+        </div>
+    </div>
+</md-content>  
+
+<md-content>
+    <div class="ps_content md-padding" layout-gt-sm="row" layout-align="start start">
+        <div flex="0" flex-md="0" flex-lg="20" flex-xl="25"></div>
+        <div flex-sm="100" flex-md="60" flex-lg="35" flex-xl="30" flex="100" layout="column">
+            <md-card class="cardbox default-card">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h2 class="md-headline"><b>Welcome to swisscovery UNIGE</b></h1>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p>
+                        Here you can find books, ebooks, articles, journals, databases and other documents from the collection of the <a href="https://www.unige.ch/biblio/en" target="_blank">University of Geneva Library</a> (swisscovery UNIGE) but also from the <a href="https://vge.swisscovery.slsp.ch/discovery/search?vid=41SLSP_VGE:VU1" target="_blank">other scientific libraries of the City of Geneva</a> (swisscovery Geneva) and the <a href="https://registration.slsp.ch/libraries/?lang=en" target="_blank">490 swiss academic libraries</a> (swisscovery and swisscovery plus) 
+                    </p>
+                </md-card-content>
+            </md-card>
+
+            <md-card class="cardbox default-card news">
+                <md-card-title>
+                                
+                    <md-card-title-text>
+                        <h2 class="md-headline">Search Scopes</h2>
+                    </md-card-title-text>
+
+                </md-card-title>
+                
+                <md-subheader class="collapsible" ng-click="ctrl.$showScopes1 = !ctrl.$showScopes1">
+                    <h3><b>swisscovery UNIGE</b>
+                    <md-icon ng-class="{'toggled' : ctrl.$showScopes1}">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                        </svg>
+                    </md-icon></h3>
+                    <md-card-content class="ng-hide section unige-scopes" ng-show="ctrl.$showScopes1" aria-hidden="true">
+                        <ul>
+                            <li>Physical and digital collections of the <a href="https://www.unige.ch/biblio/en" target="_blank">University of Geneva Library</a> and the <a href="https://www.fondationhardt.ch/la-bibliotheque/" target="_blank"> Hardt Foundation for the Study of Classical Antiquity</a></li>
+                            <li>References of the <a href="https://archive-ouverte.unige.ch/" target="_blank">UNIGE Open Archive</a></li>
+                        </ul>
+                        <p><br/><img src="custom/41SLSP_UGE-VU1/img/purchase-books.svg" class="icon-small" alt="icône Inscription"> &nbsp;&nbsp;&nbsp;<i>Document orders are free but only possible for DBU documents (to all campus locations) and Uni Bastions Battelle documents (to Uni Bastions Jura)</i></p>
+                    </md-card-content>
+                </md-subheader>
+                
+                <md-subheader class="collapsible" ng-click="ctrl.$showScopes2 = !ctrl.$showScopes2">
+                    <h3><b>swisscovery Geneva</b>
+                    <md-icon ng-class="{'toggled' : ctrl.$showScopes2}">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                        </svg>
+                    </md-icon></h3>
+                    <md-card-content class="ng-hide section unige-scopes" ng-show="ctrl.$showScopes2" aria-hidden="true">
+                    <p>Collections of Geneva institutions:
+                        <ul>
+                            <li>University of Geneva Library, Fondation Hardt and UNIGE Open Archive</li>
+                            <li><a href="https://vge.swisscovery.slsp.ch/discovery/search?vid=41SLSP_VGE:VU1" target="_blank">Bibliothèques scientifiques de la Ville de Genève</a> : BGE, BAA, CJBG, FMAC, IMV, MEG, MHS, MHN, Musée Ariana, Archives de la Ville et Bibliothèque musicale</li>
+                            <li><a href="https://www.graduateinstitute.ch/library/" target="_blank">Bibliothèque de l'Institut de Hautes Etudes Internationales et du Développement (IHEID)</a></li>
+                            <li><a href="https://www.hes-so.ch/la-hes-so/bibliotheques" target="_blank">Bibliothèques genevoises de la Haute Ecole Spécialisée de Suisse Occidentale (HES-SO)</a> : HEAD, HEG, HEdS et HETS</li>
+                            <li><a href="https://isr.swisscovery.slsp.ch/discovery/search?vid=41SLSP_RRO:VU1" target="_blank">Autres bibliothèques spécialisées</a> : Archives d'Etat, Pouvoir judiciaire, Conseil oecuménique des Eglises (COE) et Bibliothèque Filigrane</li>
+                        </ul>
+                    </p>
+                    </md-card-content>
+                </md-subheader>
+            
+                <md-subheader class="collapsible" ng-click="ctrl.$showScopes3 = !ctrl.$showScopes3">
+                    <h3><b>swisscovery</b>
+                    <md-icon ng-class="{'toggled' : ctrl.$showScopes3}">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                        </svg>
+                    </md-icon></h3>
+                    <md-card-content class="ng-hide section unige-scopes" ng-show="ctrl.$showScopes3" aria-hidden="true">
+                        <ul>
+                            <li>Collections of all <a href="https://registration.slsp.ch/libraries/?lang=en" target="_blank">libraries in the SLSP network</a></li>
+                        </ul>
+                        <p><br/><img src="custom/41SLSP_UGE-VU1/img/purchase-books.svg" class="icon-small" alt="icône Inscription"> &nbsp;&nbsp;&nbsp;<i>You can order documents via the shuttle service (<a href="https://www.unige.ch/biblio/en/services/ill/order/" target="_blank">see details</a>)</i></p>
+                        </ul>
+                    </md-card-content>
+                </md-subheader>
+            
+                <md-subheader class="collapsible" ng-click="ctrl.$showScopes4 = !ctrl.$showScopes4">
+                    <h3><b>swisscovery plus</b>
+                    <md-icon ng-class="{'toggled' : ctrl.$showScopes4}">
+                        <svg version="1.1" x="0px" y="0px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false">
+                            <path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z"></path>
+                            <path d="M0 0h48v48h-48z" fill="none"></path>
+                        </svg>
+                    </md-icon></h3>
+                    <md-card-content class="ng-hide section unige-scopes" ng-show="ctrl.$showScopes4" aria-hidden="true">
+                        <ul>
+                            <li>Collections of all <a href="https://registration.slsp.ch/libraries/?lang=en" target="_blank">libraries in the SLSP network</a></a></li>
+                            <li>Resources of the <a href="https://renouvaud.ch" target="_blank">Renouvaud network </a> (libraries of the Canton of Vaud) </li>
+                            <li>Digital resources without full text</li>
+                        </ul>
+                        <p><br/><img src="custom/41SLSP_UGE-VU1/img/purchase-books.svg" class="icon-small" alt="icône Inscription"> &nbsp;&nbsp;&nbsp;<i>Documents from the Renouvaud network can be ordered via the shuttle service (<a href="https://www.unige.ch/biblio/en/services/ill/order/" target="_blank">see details</a>)</i></p>
+                    </md-card-content>
+                </md-subheader>
+            </md-card>
+            
+            <unige-bib-news-component></unige-bib-news-component>
+
+        </div>
+
+        <div flex-sm="100" flex-md="40" flex-lg="20" flex-xl="20" flex="100" layout="column">
+
+            <md-card class="cardbox default-card">
+              <md-card-title>
+                <md-card-title-text>
+                  <div class="card-title">
+                    <h2 class="md-headline"><b>Toolbox</b></h2>
+                  </div>
+                </md-card-title-text>
+              </md-card-title>
+              <md-card-content>
+                <div class="card-item layout-row layout-row-inscription" layout="row">
+                  <md-card-avatar>
+                    <img src="custom/41SLSP_UGE-VU1/img/idcard.svg" class="icon" alt="icône Inscription">
+                  </md-card-avatar>
+                  <div class="toolkit-text">
+                    <a href="https://www.unige.ch/biblio/en/services/registration/" target="_blank">REGISTER</a>
+                  </div>
+                </div>
+                <div class="card-item layout-row" layout="row">
+                  <md-card-avatar>
+                    <img src="custom/41SLSP_UGE-VU1/img/book-bookmark.svg" class="icon" alt="icône Guides et tutoriels">
+                  </md-card-avatar>
+                  <div class="toolkit-text">
+                    <a href="https://www.unige.ch/biblio/fr/formation/aide-swisscovery-unige/" target="_blank">Guides and Tutorials</a>
+                  </div>
+                </div>
+                <div class="card-item layout-row" layout="row">
+                  <md-card-avatar>
+                    <img src="custom/41SLSP_UGE-VU1/img/question.svg" class="icon" alt="icône Aide à la recherche">
+                  </md-card-avatar>
+                  <div class="toolkit-text">
+                    <a href="https://www.unige.ch/biblio/en/services/help-search/" target="_blank">Help for your documentary searches</a>
+                  </div>
+                </div>
+                <div class="card-item layout-row" layout="row">
+                  <md-card-avatar>
+                    <img src="custom/41SLSP_UGE-VU1/img/bank.svg" class="icon" alt="icône Guides de recherche par discipline">
+                  </md-card-avatar>
+                  <div class="toolkit-text">
+                    <a href="https://www.unige.ch/biblio/en/disciplines/" target="_blank">Resources by subject area</a>
+                  </div>
+                </div>
+                <div class="card-item layout-row" layout="row">
+                  <md-card-avatar>
+                    <img src="custom/41SLSP_UGE-VU1/img/laptop.svg" class="icon" alt="icône Guides de Accès à distance">
+                  </md-card-avatar>
+                  <div class="toolkit-text">
+                    <a href="https://www.unige.ch/biblio/en/services/work-remotely/" target="_blank">Remote Access</a>
+                  </div>
+                </div>
+                
+                
+                <div class="card-item layout-row" layout="row">
+                  <md-card-avatar>
+                    <img src="custom/41SLSP_UGE-VU1/img/law.svg" class="icon" alt="icône Règlement d'utilisation">
+                  </md-card-avatar>
+                  <div class="toolkit-text">
+                    Regulations for the use of <a href="http://purl.org/unige/reglement-collections" target="_blank">collections</a> / <a href="https://www.unige.ch/biblio/index.php/download_file/view/1562/1459/" target="_blank">rooms</a>
+                  </div>
+                </div>
+                <div class="card-item layout-row" layout="row">
+                  <md-card-avatar>
+                    <img src="custom/41SLSP_UGE-VU1/img/megaphone.svg" class="icon" alt="icône Remarques / suggestions">
+                  </md-card-avatar>
+                  <div class="toolkit-text">
+                    <a href="https://www.unige.ch/dis/presentation/contact/formulaire/" target="_blank">Comments or suggestions?</a>
+                  </div>
+                </div>
+              </md-card-content>
+            </md-card>
+                            
+            <md-card class="cardbox default-card">
+                <md-card-title>
+                    <md-card-title-text>
+                        <h2 class="md-headline"><b>How much does it cost?</b></h2>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                    <p>
+                        Access to the rooms and collections of the University of Geneva Library is free and open to all, including the registration and borrowing of documents. However, there may be a charge for late returns or for ordering documents (<a href="https://www.unige.ch/biblio/en/infos/pricing/" target="_blank">see details</a>).<br/><br/>
+                    </p>
+                
+                    <div class="resp-container">
+                        <iframe class="resp-iframe" src="//www.youtube.com/embed/A3uPJ5HSHHk?wmode=transparent" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                </md-card-content>
+            </md-card>
+
+        </div>
+    </div>
+</md-content>
+<md-content>
+    <div flex="100">
+        <md-card class="prm-primary-bg psfooter" flex layout-gt-sm="row" layout-align="space-around start">
+            <md-card-content class="prm-primary-bg">
+                <span class="md-headline">Address:</span>
+                <p>Université de Genève, Division de l'Information Scientifique (DIS)</p>
+                <p>28 bd du Pont-d'Arve</p>
+                <p>1205 Genève</p>
+            </md-card-content>
+            <md-card-content class="prm-primary-bg">
+                <span class="md-headline">Contact us:</span>
+                <p>Uni Arve (Sciences): <a href="mailto:biblio-arve@unige.ch">biblio-arve@unige.ch</a>
+                <br/>Uni Bastions: <a href="mailto:biblio-bastions-pret@unige.ch">biblio-bastions-pret@unige.ch</a>
+                <br/>Uni CMU: <a href="mailto:biblio-cmu@unige.ch">biblio-cmu@unige.ch</a>
+                <br/>Uni Mail: <a href="mailto:biblio-mail-pret@unige.ch">biblio-mail-pret@unige.ch</a></p>
+            </md-card-content>
+            <md-card-content class="prm-primary-bg">
+                <span class="md-headline">Description:</span>
+                <p>This page is the access point to the resources of the</p>
+                <p><a class="ps_link" href="https://www.unige.ch/biblio/en/" target="_blank">Library of the University of Geneva</a></p>
+            </md-card-content>
+        </md-card>
+        <md-card class="prm-primary-bg psfooter-legal" flex layout-gt-sm="row" layout-align-gt-sm="center start">
+            <md-card-content class="prm-primary-bg" flex-gt-sm="70" layout-align-gt-sm="end">
+                <span class="legal">The Library of the University of Geneva is member of the <a href="https://slsp.ch" target="_blank" class="ps_link">Swiss Library Service Platform (SLSP) network</a></span>
+            </md-card-content>
+            <md-card-content class="prm-primary-bg" flex-gt-sm="15" layout-align-gt-sm="end">
+                <a class="ps_link legal" href="https://slsp.ch/termsofuse" target="_blank">Legal Information</a>
+            </md-card-content>
+            <md-card-content class="prm-primary-bg" flex-gt-sm="15" layout-align-gt-sm="end">
+                <a class="ps_link legal" href="https://slsp.ch/dataprotection" target="_blank">Data Protection</a>
+            </md-card-content>
+        </md-card>
+    </div>
+</md-content>

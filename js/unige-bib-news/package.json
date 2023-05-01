@@ -1,0 +1,12 @@
+{
+  "name": "unige-bib-news",
+  "version": "1.1.0",
+  "description": "",
+  "main": "unige-bib-news.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ETH - update by Pablo Iriarte, UNIGE",
+  "license": "ISC"
+}
