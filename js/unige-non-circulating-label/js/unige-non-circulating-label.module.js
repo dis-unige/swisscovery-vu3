@@ -1,6 +1,6 @@
 angular
     .module('unigeNonCirculatingLabel', [])
-    .controller('unigeNonCirculatingLabelController', ['$scope', '$location', function ($scope,$location) {
+    .controller('unigeNonCirculatingLabelController', ['$scope', function ($scope) {
         var vm = this;
         this.$onInit = function() {
             
@@ -16,7 +16,7 @@ angular
                     // This listener function is called both during initial run and whenever the watched variable changes.
                     if (angular.isDefined(vm.parentCtrl.loc)){
                         // Prevent the listener from running when the locations list hasn't been defined yet (initial run)
-                             console.log(vm.parentCtrl.loc);
+                             //console.log(vm.parentCtrl);
                          
                              // If a user is connected, the loanable status display is correct
                              if (vm.parentCtrl.isLoggedIn()){
