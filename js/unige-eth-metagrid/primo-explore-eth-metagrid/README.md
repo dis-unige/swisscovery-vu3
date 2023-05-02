@@ -1,9 +1,12 @@
-# primo-explore-eth-metagrid
+# primo-explore-eth-metagrid (UNIGE edit)
+
+This is a modified version of the [primo-explore-eth-metagrid module originally developed by ETH Zürich](https://gitlab.com/ethlibrary/primo-explore-modules/primo-explore-eth-metagrid/-/tree/master/)
+to support IdRef IDs in addition to GNDs.
 
 ## Description
 
 This Module integrates Metagrid into Primo VE.
-It extracts the GND IDs (by default in lds03) and queries the Metagrid API with it.
+It extracts the GND and IdRef IDs (by default in lds03 and lds90 respectively) and queries the Metagrid API with it.
 With the whitelist the result is filtered and the links sorted by person are inserted into the links section.
 The whitelist of providers whose links should be displayed can be changed in eth-metagrid.config.js. The array contains the slug of the respective provider (https://api.metagrid.ch/providers.json).
 When you add a slug, you must also add the labels in the eth-metagrid.config.js (providers.json: 'short_description').
