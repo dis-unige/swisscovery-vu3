@@ -16,8 +16,7 @@ angular
                     // This listener function is called both during initial run and whenever the watched variable changes.
                     if (angular.isDefined(vm.parentCtrl.loc)){
                         // Prevent the listener from running when the locations list hasn't been defined yet (initial run)
-                             //console.log(vm.parentCtrl);
-                         
+
                              // If a user is connected, the loanable status display is correct
                              if (vm.parentCtrl.isLoggedIn()){
                                  // Do nothing for now. Could possibly edit 
@@ -33,9 +32,6 @@ angular
                              
                                   for(var i = 0; i < itemLocations.length; i++){
                                       itemLocations[i].itemFields[1] = 'Veuillez vous connecter pour savoir si le document est empruntable et connaître la durée de prêt.';
-                                      //itemLocations[i]._additionalData.itemcategoryname = 'Veuillez vous connecter pour savoir si le document est empruntable et connaitre la durée de prêt';
-                                      // Not sure if this is reliable...
-                                      //console.log(itemLocations[i]);
                                   }
                              }
                          }
