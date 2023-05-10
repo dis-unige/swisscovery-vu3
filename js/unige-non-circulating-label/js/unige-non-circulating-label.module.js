@@ -31,7 +31,7 @@ angular
                                  var itemLocations = vm.parentCtrl.loc.items;
                              
                                   for(var i = 0; i < itemLocations.length; i++){
-                                      itemLocations[i].itemFields[1] = 'Veuillez vous connecter pour savoir si le document est empruntable et connaître la durée de prêt.';
+                                      itemLocations[i].itemFields[1] = '<b>Veuillez vous connecter <br/> pour savoir si le document <br/> est empruntable</b>';
                                   }
                              }
                          }

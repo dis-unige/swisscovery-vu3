@@ -465,3 +465,38 @@ prm-service-button > button > span {
     flex-direction: column;
 }*/
 
+/* Code pour masquer le bouton de numérisation pour les autres bibliothèques */
+
+prm-alma-other-members prm-service-button [aria-label="Digitization"] {
+  display: none;
+}
+
+prm-alma-other-members prm-service-button [aria-label="Numérisation"] {
+  display: none;
+}
+
+prm-alma-other-members prm-service-button [aria-label="Digitalisierung"] {
+  display: none;
+}
+
+prm-alma-other-members prm-service-button [aria-label="Digitalizzazione"] {
+  display: none;
+}
+
+prm-alma-other-members prm-service-button [aria-label="Order photocopies"] {
+  display: none;
+}
+
+prm-alma-other-members prm-service-button [aria-label="Commander des photocopies"] {
+  display: none;
+}
+
+prm-alma-other-members prm-service-button [aria-label="Kopienbestellung"] {
+  display: none;
+}
+
+prm-alma-other-members prm-service-button [aria-label="Ordinare fotocopie"] {
+  display: none;
+}
+
+

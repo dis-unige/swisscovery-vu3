@@ -1,8 +1,8 @@
 {
-    "name": "pickup-anywhere-form-after",
+    "name": "prm-login-after",
     "version": "1.0.0",
     "description": "",
-    "main": "pickup-anywhere-form-after.module.js",
+    "main": "prm-login-after.module.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
