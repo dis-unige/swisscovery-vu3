@@ -1,0 +1,12 @@
+<div class="unige-db-categories">
+    <ul ng-if="$parent.$ctrl.dbOverrideCategories">
+            <li ng-repeat="category in $parent.$ctrl.parentCtrl.dbOverrideCategories">
+                <a href="{{category.link}}">{{category.term}}</a>
+                <ul ng-if="category.subcategories.length > 0">
+                    <li ng-repeat="subcategory in category.subcategories">
+                        <a href="{{subcategory.link}}">{{subcategory.term}}</a>
+                    </li>
+                </ul>
+            </li>
+    </ul>
+</div>
