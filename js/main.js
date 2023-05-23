@@ -24,8 +24,8 @@ import './prm-alma-other-units-after';
 import './prm-login-after';
 import './prm-location-holdings-after';
 import './unige-bib-news';
-import './unige-ill-open-url';
-import './unige-non-circulating-label';
-import './unige-db-categories';
+import './prm-blank-ill-after';
+import './slsp-location-items-after';
+import './prm-databases-categorize-after';
 
 var app = angular.module('viewCustom', ['angularLoad', 'slspIllSigninOrderAlert', 'ethLocationsAfterModule', 'ethLocationItemsAfterModule', 'slspArchivesHtgi', 'slspArchivesViewit', 'slspHttpInterceptRequests', 'slspUserAreaExpandableAfterModule', 'slspLoanAfterModule', 'slspPersonalInfoAfterModule', 'prmAlmaOtherMembersAfterModule', 'prmServiceNgrsAfterModule', 'prmServicePhysicalBestOfferAfterModule', 'slspHttpInterceptPickupInformation', 'bcuSearchBarAfterModule', 'bcuTabsAndScopesSelectorAfterModule', 'prmServiceButtonAfterModule', 'prmServiceDetailsAfterModule', 'prmFullViewAfterModule', 'slspRequestAfterModule', 'slspRequestsAfterModule', 'prmAlmaViewitItemsAfterModule', 'prmAlmaOtherUnitsAfterModule', 'prmLoginAfterModule', 'prmLocationHoldingsAfterModule', 'unigeBibNewsModule', 'unigeIllOpenUrl', 'unigeNonCirculatingLabel','unigeDbCategories']);
