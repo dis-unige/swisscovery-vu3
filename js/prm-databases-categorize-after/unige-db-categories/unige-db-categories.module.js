@@ -27,34 +27,40 @@ angular
                         if (angular.isDefined(vm.parentCtrl.dbCategories)){
                             
                             vm.parentCtrl.dbCategories.dbcategory.forEach( (originalCategory) => {
-                                let newMenuEntry = new Object();
-                                newMenuEntry.link = baseUrl + ',' + originalCategory.path;
-                                if (angular.isDefined(originalCategory.displayValue)){
-                                    newMenuEntry.term = originalCategory.displayValue;
-                                }
-                                else {
-                                    newMenuEntry.term = originalCategory.name;
-                                }
-                                if (originalCategory.dbcategories[0].dbcategory.length > 0){
+                                
+                                // Check for duplicates due to differences in case or accents and ignore them
+                                if (!vm.parentCtrl.dbOverrideCategories.some( e => e.term.localeCompare(originalCategory.displayValue, 'fr-CH', { sensitivity: 'base' }) == 0)){
+                                    let newMenuEntry = new Object();
+                                    newMenuEntry.link = baseUrl + ',' + originalCategory.path;
+                                    if (angular.isDefined(originalCategory.displayValue)){
+                                        newMenuEntry.term = originalCategory.displayValue;
+                                    }
+                                    else {
+                                        newMenuEntry.term = originalCategory.name;
+                                    }
                                     newMenuEntry.subcategories = [];
-                                    originalCategory.dbcategories[0].dbcategory.forEach( (subCategory) => {
-                                        let newSubMenuEntry = new Object();
-                                        if (angular.isDefined(subCategory.path)){
-                                            newSubMenuEntry.link = baseUrl + ',' + subCategory.path;
-                                        }
-                                        else {
-                                            newSubMenuEntry.link = baseUrl + ',' + originalCategory.name + '─' + subCategory.name;
-                                        }
-                                        if (angular.isDefined(subCategory.displayValue)){
-                                            newSubMenuEntry.term = subCategory.displayValue;
-                                        }
-                                        else {
-                                            newSubMenuEntry.term = subCategory.name;
-                                        }
-                                        newMenuEntry.subcategories.push(newSubMenuEntry);
-                                    })
+                                    newMenuEntry.subcategories.push({term:'Ouvrages de référence',link:'#'});
+                                
+                                    if (originalCategory.dbcategories[0].dbcategory.length > 0){
+                                        originalCategory.dbcategories[0].dbcategory.forEach( (subCategory) => {
+                                            let newSubMenuEntry = new Object();
+                                            if (angular.isDefined(subCategory.path)){
+                                                newSubMenuEntry.link = baseUrl + ',' + subCategory.path;
+                                            }
+                                            else {
+                                                newSubMenuEntry.link = baseUrl + ',' + originalCategory.name + '─' + subCategory.name;
+                                            }
+                                            if (angular.isDefined(subCategory.displayValue)){
+                                                newSubMenuEntry.term = subCategory.displayValue;
+                                            }
+                                            else {
+                                                newSubMenuEntry.term = subCategory.name;
+                                            }
+                                            newMenuEntry.subcategories.push(newSubMenuEntry);
+                                        })
+                                    }
+                                    vm.parentCtrl.dbOverrideCategories.push(newMenuEntry);
                                 }
-                                vm.parentCtrl.dbOverrideCategories.push(newMenuEntry);
                             });
                             //console.log(vm.parentCtrl.dbOverrideCategories);
                             // Remove original categories menu
