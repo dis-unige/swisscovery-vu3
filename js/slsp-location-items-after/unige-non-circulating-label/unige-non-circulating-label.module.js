@@ -1,9 +1,11 @@
 angular
     .module('unigeNonCirculatingLabel', [])
-    .controller('unigeNonCirculatingLabelController', ['$scope', function ($scope) {
+    .controller('unigeNonCirculatingLabelController', ['$scope','$translate', function ($scope, $translate) {
         var vm = this;
         this.$onInit = function() {
-            
+            // Prepare message to be displayed
+            var displayMessage;
+            $translate('nui.message.itemlogin').then((translation) => {if (angular.isDefined(translation)){displayMessage = translation}});
             $scope.$watch(
                 function () {
                     if (angular.isDefined(vm.parentCtrl.loc) && angular.isDefined(vm.parentCtrl.loc.items)) {
@@ -22,7 +24,7 @@ angular
                                  // Do nothing for now. Could possibly edit 
                                  console.log('User is logged in, loanable status display correct.');
                              }
-                             else {
+                             else {                             
                                  // If no user is logged in, Primo displays a "not loanable" status even if this may not be the case.
                                  // Replace that status with a note asking users to log in to get more info.
                              
@@ -31,7 +33,7 @@ angular
                                  var itemLocations = vm.parentCtrl.loc.items;
                              
                                   for(var i = 0; i < itemLocations.length; i++){
-                                      itemLocations[i].itemFields[1] = '<b>Veuillez vous connecter <br/> pour savoir si le document <br/> est empruntable</b>';
+                                      itemLocations[i].itemFields[1] = displayMessage;
                                   }
                              }
                          }
