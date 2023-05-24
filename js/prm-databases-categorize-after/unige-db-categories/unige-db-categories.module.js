@@ -64,7 +64,6 @@ angular
                                     vm.parentCtrl.dbOverrideCategories.push(newMenuEntry);
                                     
                             });
-                            console.log(vm.parentCtrl);
                             // Remove original categories menu
                             document.getElementById('stickyDB').remove();
                         }
