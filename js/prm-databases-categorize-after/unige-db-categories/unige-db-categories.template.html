@@ -1,4 +1,5 @@
 <div class="unige-db-categories">
+    <h2 translate="dbcategories.title"></h2>
     <ul ng-if="$parent.$ctrl.dbOverrideCategories">
             <li ng-repeat="category in $parent.$ctrl.parentCtrl.dbOverrideCategories">
                 <a href="{{category.link}}">{{category.term}}</a>
@@ -10,3 +11,4 @@
             </li>
     </ul>
 </div>
+

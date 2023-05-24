@@ -25,7 +25,6 @@ angular
                         let baseUrl = $location.$$absUrl.substring(0, $location.$$absUrl.indexOf('databases=category')+18);
                         
                         if (angular.isDefined(vm.parentCtrl.dbCategories)){
-                            console.log(vm.parentCtrl.dbCategories.dbcategory);
                             
                             vm.parentCtrl.dbCategories.dbcategory.forEach( (originalCategory) => {
                                 let newMenuEntry = new Object();
@@ -57,7 +56,7 @@ angular
                                 }
                                 vm.parentCtrl.dbOverrideCategories.push(newMenuEntry);
                             });
-                            console.log(vm.parentCtrl.dbOverrideCategories);
+                            //console.log(vm.parentCtrl.dbOverrideCategories);
                             // Remove original categories menu
                             document.getElementById('stickyDB').remove();
                         }
@@ -69,5 +68,5 @@ angular
     .component('prmDatabasesCategorizeAfter', {
         bindings: {parentCtrl: `<`},
         controller: 'unigeDbCategoriesController',
-        template: unigeDbCategoriesHtml 
+        template: unigeDbCategoriesHtml
     });

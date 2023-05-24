@@ -500,3 +500,12 @@ prm-alma-other-members prm-service-button [aria-label="Ordinare fotocopie"] {
 }
 
 
+/* Mise en forme du menu de remplacement dans la page base de données */
+
+.unige-db-categories {
+    width: max-content;
+}
+
+.unige-db-categories ul {
+    width: 90%;
+}
