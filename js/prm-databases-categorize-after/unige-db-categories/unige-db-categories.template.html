@@ -1,10 +1,10 @@
 <div class="unige-db-categories">
     <h2 translate="dbcategories.title"></h2>
     <ul ng-if="$parent.$ctrl.dbOverrideCategories">
-            <li ng-repeat="category in $parent.$ctrl.parentCtrl.dbOverrideCategories">
+            <li ng-repeat="category in $parent.$ctrl.parentCtrl.dbOverrideCategories" ng-class="category.selected">
                 <a href="{{category.link}}">{{category.term}}</a>
                 <ul ng-if="category.subcategories.length > 0">
-                    <li ng-repeat="subcategory in category.subcategories">
+                    <li ng-repeat="subcategory in category.subcategories" ng-class="subcategory.selected">
                         <a href="{{subcategory.link}}">{{subcategory.term}}</a>
                     </li>
                 </ul>

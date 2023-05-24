@@ -3580,5 +3580,10 @@ prm-alma-other-members prm-service-button [aria-label="Ordinare fotocopie"] {
 }
 
 .unige-db-categories ul {
+    font-weight: normal;
     width: 90%;
+}
+
+.unige-db-categories li.selected {
+    font-weight: bold;
 }

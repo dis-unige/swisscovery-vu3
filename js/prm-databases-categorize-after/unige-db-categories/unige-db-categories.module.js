@@ -23,7 +23,7 @@ angular
                             
                             vm.parentCtrl.dbOverrideCategories = [];                   
                             let baseUrl = $location.$$absUrl.replace(/^(.*)query=[^&]*(\&.*databases=).*/, "$1query=contains,dbcategory$2");
-                            
+                            let currentSelection = vm.parentCtrl.dbParamArray;
                             vm.parentCtrl.dbCategories.dbcategory.forEach( (originalCategory) => {
                                 
                                     let newMenuEntry = new Object();
@@ -33,6 +33,9 @@ angular
                                     }
                                     else {
                                         newMenuEntry.term = originalCategory.name;
+                                    }
+                                    if (originalCategory.name === currentSelection[0]){
+                                        newMenuEntry.selected = 'selected';
                                     }
                                     newMenuEntry.subcategories = [];
                                     newMenuEntry.subcategories.push({term:'Ouvrages de référence',link:'#'});
@@ -52,13 +55,16 @@ angular
                                             else {
                                                 newSubMenuEntry.term = subCategory.name;
                                             }
+                                            if (subCategory.name === currentSelection[1]){
+                                                newSubMenuEntry.selected = 'selected';
+                                            }
                                             newMenuEntry.subcategories.push(newSubMenuEntry);
                                         })
                                     }
                                     vm.parentCtrl.dbOverrideCategories.push(newMenuEntry);
                                     
                             });
-                            //console.log(vm.parentCtrl.dbOverrideCategories);
+                            console.log(vm.parentCtrl);
                             // Remove original categories menu
                             document.getElementById('stickyDB').remove();
                         }
