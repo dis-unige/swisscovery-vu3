@@ -19,17 +19,15 @@ angular
                     },
                     function () {
                         // This listener function is called both during initial run and whenever the watched variable changes.
-                        
-                        vm.parentCtrl.dbOverrideCategories = [];
-                        
-                        let baseUrl = $location.$$absUrl.substring(0, $location.$$absUrl.indexOf('databases=category')+18);
-                        
                         if (angular.isDefined(vm.parentCtrl.dbCategories)){
+                            
+                            vm.parentCtrl.dbOverrideCategories = [];                   
+                            let baseUrl = $location.$$absUrl.replace(/^(.*)query=[^&]*(\&.*databases=).*/, "$1query=contains,dbcategory$2");
                             
                             vm.parentCtrl.dbCategories.dbcategory.forEach( (originalCategory) => {
                                 
                                     let newMenuEntry = new Object();
-                                    newMenuEntry.link = baseUrl + ',' + originalCategory.path;
+                                    newMenuEntry.link = baseUrl + 'category,' + originalCategory.path;
                                     if (angular.isDefined(originalCategory.displayValue)){
                                         newMenuEntry.term = originalCategory.displayValue;
                                     }
@@ -43,10 +41,10 @@ angular
                                         originalCategory.dbcategories[0].dbcategory.forEach( (subCategory) => {
                                             let newSubMenuEntry = new Object();
                                             if (angular.isDefined(subCategory.path)){
-                                                newSubMenuEntry.link = baseUrl + ',' + subCategory.path;
+                                                newSubMenuEntry.link = baseUrl + 'category,' + subCategory.path;
                                             }
                                             else {
-                                                newSubMenuEntry.link = baseUrl + ',' + originalCategory.name + '─' + subCategory.name;
+                                                newSubMenuEntry.link = baseUrl + 'category,' + originalCategory.name + '─' + subCategory.name;
                                             }
                                             if (angular.isDefined(subCategory.displayValue)){
                                                 newSubMenuEntry.term = subCategory.displayValue;
