@@ -28,8 +28,6 @@ angular
                             
                             vm.parentCtrl.dbCategories.dbcategory.forEach( (originalCategory) => {
                                 
-                                // Check for duplicates due to differences in case or accents and ignore them
-                                if (!vm.parentCtrl.dbOverrideCategories.some( e => e.term.localeCompare(originalCategory.displayValue, 'fr-CH', { sensitivity: 'base' }) == 0)){
                                     let newMenuEntry = new Object();
                                     newMenuEntry.link = baseUrl + ',' + originalCategory.path;
                                     if (angular.isDefined(originalCategory.displayValue)){
@@ -60,7 +58,7 @@ angular
                                         })
                                     }
                                     vm.parentCtrl.dbOverrideCategories.push(newMenuEntry);
-                                }
+                                    
                             });
                             //console.log(vm.parentCtrl.dbOverrideCategories);
                             // Remove original categories menu
