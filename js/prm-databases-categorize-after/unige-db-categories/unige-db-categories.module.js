@@ -4,13 +4,18 @@ import {unigeDbCategoriesConfig} from './unige-db-categories.config.js';
 angular
     .module('unigeDbCategories', [])
     .factory('unigeDbCategoriesConfig', unigeDbCategoriesConfig)
-    .controller('unigeDbCategoriesController', ['$scope', '$location', function ($scope, $location) {
+    .controller('unigeDbCategoriesController', ['$scope', '$location', '$translate', function ($scope, $location, $translate) {
         var vm = this;
         this.$onInit = function() {
             
             // Only run on dbsearch page
             if ($location.path().toLowerCase() == '/dbsearch') {
-            
+                
+                // Fetch display label translations
+                var encSearchLabel, oreSearchLabel;
+                $translate('unige.databasesearch.enc').then((translation) => {if (angular.isDefined(translation)){encSearchLabel = translation}});
+                $translate('unige.databasesearch.ore').then((translation) => {if (angular.isDefined(translation)){oreSearchLabel = translation}});
+                
                 $scope.$watch(
                     function () {
                         if (angular.isDefined(vm.parentCtrl.dbCategories) && angular.isDefined(vm.parentCtrl.dbCategories.dbcategory[0].path)){
@@ -49,17 +54,17 @@ angular
                                     if(angular.isDefined(refWorksLinks)){
                                         if(angular.isDefined(refWorksLinks.dic)){
                                             newMenuEntry.subcategories.push({
-                                                term:'Dictionnaires',link:dbRefSearchUrl + refWorksLinks.dic + '&vid=' + currentViewId
+                                                term:encSearchLabel,link:dbRefSearchUrl + refWorksLinks.dic + '&vid=' + currentViewId
                                             });
                                         }
                                         if(angular.isDefined(refWorksLinks.enc)){
                                             newMenuEntry.subcategories.push({
-                                                term:'Encyclopédies',link:dbRefSearchUrl + refWorksLinks.enc + '&vid=' + currentViewId
+                                                term:encSearchLabel,link:dbRefSearchUrl + refWorksLinks.enc + '&vid=' + currentViewId
                                             });
                                         }
                                         if(angular.isDefined(refWorksLinks.ore)){
                                             newMenuEntry.subcategories.push({
-                                                term:'Ouvrages de référence',link:dbRefSearchUrl + refWorksLinks.ore + '&vid=' + currentViewId
+                                                term:oreSearchLabel,link:dbRefSearchUrl + refWorksLinks.ore + '&vid=' + currentViewId
                                             });
                                         }
                                     }
