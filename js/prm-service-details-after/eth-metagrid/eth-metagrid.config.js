@@ -7,7 +7,7 @@ export const ethMetagridConfig = function(){
         // You can either define a whitelist (only display items on the list) or a blacklist (display all items except those on the list).
         // If both are defined, only the whitelist will be used. If neither are defined, all metagrid links will be displayed.
         blacklist:
-            ["viaf", "sudoc", "loc", "gnd", "histhub"],
+            ["viaf", "sudoc", "gnd", "histhub"],
         label: {
             'hallernet': {
                 de: 'Editions- und Forschungsplattform hallerNet',
