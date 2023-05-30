@@ -34,7 +34,6 @@ angular
                             vm.parentCtrl.dbOverrideCategories = [];                   
                             let baseUrl = $location.$$absUrl.replace(/^(.*)query=[^&]*(\&.*databases=).*/, "$1query=contains,dbcategory$2");
                             let currentSelection = vm.parentCtrl.dbParamArray;
-                            console.log(vm.parentCtrl);
                             vm.parentCtrl.dbCategories.dbcategory.forEach( (originalCategory) => {
                                 
                                     let newMenuEntry = new Object();
