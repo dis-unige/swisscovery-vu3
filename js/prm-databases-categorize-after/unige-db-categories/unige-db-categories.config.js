@@ -1,5 +1,5 @@
 export const unigeDbCategoriesConfig = {
-        // List of subject codes present in 960$$a for online encyclopedias (enc), reference works (ore) and dictionaries (dic).
+    // List of subject codes present in 960$$a for online encyclopedias (enc) and reference works (ore).
         // Codes are associated with a term in the databases subject domains. Only codes explicitely defined
         // here will be displayed.
         baseurl : 'search?pfilter=rtype,exact,books,AND&tab=41SLSP_UGE_MyInst_CI&search_scope=MyInst_and_CI&mode=advanced&offset=0&query=any,contains,',
@@ -17,8 +17,7 @@ export const unigeDbCategoriesConfig = {
                 ore: 'ORE_MED'
             },
             'Sciences économiques': {
-                enc: 'ENC_ECO',
-                dic: 'DIC_ECO'
+                enc: 'ENC_ECO'
             },
             'Sciences sociales': {
                 enc: 'ENC_SOC'

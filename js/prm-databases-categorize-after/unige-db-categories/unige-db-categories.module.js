@@ -52,19 +52,14 @@ angular
                                     // Check if reference works codes were defined for this topic. If yes, display them.
                                     let refWorksLinks = dbRefCodes[newMenuEntry.term];
                                     if(angular.isDefined(refWorksLinks)){
-                                        if(angular.isDefined(refWorksLinks.dic)){
-                                            newMenuEntry.subcategories.push({
-                                                term:encSearchLabel,link:dbRefSearchUrl + refWorksLinks.dic + '&vid=' + currentViewId
-                                            });
-                                        }
                                         if(angular.isDefined(refWorksLinks.enc)){
                                             newMenuEntry.subcategories.push({
-                                                term:encSearchLabel,link:dbRefSearchUrl + refWorksLinks.enc + '&vid=' + currentViewId
+                                                term:encSearchLabel,link:dbRefSearchUrl + refWorksLinks.enc + ',AND&vid=' + currentViewId
                                             });
                                         }
                                         if(angular.isDefined(refWorksLinks.ore)){
                                             newMenuEntry.subcategories.push({
-                                                term:oreSearchLabel,link:dbRefSearchUrl + refWorksLinks.ore + '&vid=' + currentViewId
+                                                term:oreSearchLabel,link:dbRefSearchUrl + refWorksLinks.ore + ',AND&vid=' + currentViewId
                                             });
                                         }
                                     }
