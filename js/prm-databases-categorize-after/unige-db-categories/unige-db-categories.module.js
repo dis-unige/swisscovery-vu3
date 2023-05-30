@@ -1,7 +1,9 @@
 import {unigeDbCategoriesHtml} from './unige-db-categories.template.html';
+import {unigeDbCategoriesConfig} from './unige-db-categories.config.js';
 
 angular
     .module('unigeDbCategories', [])
+    .factory('unigeDbCategoriesConfig', unigeDbCategoriesConfig)
     .controller('unigeDbCategoriesController', ['$scope', '$location', function ($scope, $location) {
         var vm = this;
         this.$onInit = function() {
@@ -20,7 +22,10 @@ angular
                     function () {
                         // This listener function is called both during initial run and whenever the watched variable changes.
                         if (angular.isDefined(vm.parentCtrl.dbCategories)){
-                            
+                            // Load list of reference work codes
+                            let dbRefCodes = unigeDbCategoriesConfig.refcode;
+                            let dbRefSearchUrl = unigeDbCategoriesConfig.baseurl;
+                            let currentViewId = vm.parentCtrl.$stateParams.vid;
                             vm.parentCtrl.dbOverrideCategories = [];                   
                             let baseUrl = $location.$$absUrl.replace(/^(.*)query=[^&]*(\&.*databases=).*/, "$1query=contains,dbcategory$2");
                             let currentSelection = vm.parentCtrl.dbParamArray;
@@ -38,8 +43,28 @@ angular
                                         newMenuEntry.selected = 'selected';
                                     }
                                     newMenuEntry.subcategories = [];
-                                    newMenuEntry.subcategories.push({term:'Ouvrages de référence',link:'#'});
+                                    
+                                    // Check if reference works codes were defined for this topic. If yes, display them.
+                                    let refWorksLinks = dbRefCodes[newMenuEntry.term];
+                                    if(angular.isDefined(refWorksLinks)){
+                                        if(angular.isDefined(refWorksLinks.dic)){
+                                            newMenuEntry.subcategories.push({
+                                                term:'Dictionnaires',link:dbRefSearchUrl + refWorksLinks.dic + '&vid=' + currentViewId
+                                            });
+                                        }
+                                        if(angular.isDefined(refWorksLinks.enc)){
+                                            newMenuEntry.subcategories.push({
+                                                term:'Encyclopédies',link:dbRefSearchUrl + refWorksLinks.enc + '&vid=' + currentViewId
+                                            });
+                                        }
+                                        if(angular.isDefined(refWorksLinks.ore)){
+                                            newMenuEntry.subcategories.push({
+                                                term:'Ouvrages de référence',link:dbRefSearchUrl + refWorksLinks.ore + '&vid=' + currentViewId
+                                            });
+                                        }
+                                    }
                                 
+                                    // Add any subcategories if present
                                     if (originalCategory.dbcategories[0].dbcategory.length > 0){
                                         originalCategory.dbcategories[0].dbcategory.forEach( (subCategory) => {
                                             let newSubMenuEntry = new Object();
