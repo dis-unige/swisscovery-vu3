@@ -4,8 +4,10 @@ export const ethMetagridConfig = function(){
         // The array contains the slug of the provider.
         // https://api.metagrid.ch/providers.json
         // if you add a slug, you have also to add the labels (providers.json: 'short_description').
-        whitelist:
-            ["hallernet", "fotostiftung", "sikart","elites-suisses-au-xxe-siecle","bsg", "dodis", "helveticat", "hls-dhs-dss","histoirerurale","lonsea","ssrq","alfred-escher","geschichtedersozialensicherheit"],
+        // You can either define a whitelist (only display items on the list) or a blacklist (display all items except those on the list).
+        // If both are defined, only the whitelist will be used. If neither are defined, all metagrid links will be displayed.
+        blacklist:
+            ["viaf", "sudoc", "loc", "gnd", "histhub"],
         label: {
             'hallernet': {
                 de: 'Editions- und Forschungsplattform hallerNet',
