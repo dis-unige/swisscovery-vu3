@@ -34,6 +34,7 @@ angular
                             vm.parentCtrl.dbOverrideCategories = [];                   
                             let baseUrl = $location.$$absUrl.replace(/^(.*)query=[^&]*(\&.*databases=).*/, "$1query=contains,dbcategory$2");
                             let currentSelection = vm.parentCtrl.dbParamArray;
+                            console.log(vm.parentCtrl);
                             vm.parentCtrl.dbCategories.dbcategory.forEach( (originalCategory) => {
                                 
                                     let newMenuEntry = new Object();
@@ -50,7 +51,7 @@ angular
                                     newMenuEntry.subcategories = [];
                                     
                                     // Check if reference works codes were defined for this topic. If yes, display them.
-                                    let refWorksLinks = dbRefCodes[newMenuEntry.term];
+                                    let refWorksLinks = dbRefCodes[originalCategory.name];
                                     if(angular.isDefined(refWorksLinks)){
                                         if(angular.isDefined(refWorksLinks.enc)){
                                             newMenuEntry.subcategories.push({

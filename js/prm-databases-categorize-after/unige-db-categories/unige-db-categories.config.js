@@ -11,7 +11,8 @@ export const unigeDbCategoriesConfig = {
                 enc: 'ENC_BIO'
             },
             'Français': {
-                dic: 'DIC_FRA'
+                enc: 'ENC_FRA',
+                ore: 'ORE_FRA'
             },
             'Médecine et santé': {
                 ore: 'ORE_MED'
