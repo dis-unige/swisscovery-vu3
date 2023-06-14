@@ -14,7 +14,7 @@ export class usiLocationOpenCloseController {
         try {
             console.log("***USI*** usiLocationOpenCloseController.$onInit\n\n");
             this.usilocation.isopen = (this.config.closedLocations.includes( this.afterCtrl.parentCtrl.currLoc.location.subLocationCode ) ) ? false : true;
-            this.usilocation.isusi = ( this.afterCtrl.parentCtrl.currLoc.location.organization == '41SLSP_UGE' ) ? true : false;
+            this.usilocation.isuge = ( this.afterCtrl.parentCtrl.currLoc.location.organization == '41SLSP_UGE' ) ? true : false;
         }
         catch (e) {
             console.error("***USI*** an error occured: usiLocationOpenCloseController.$onInit\n\n");
