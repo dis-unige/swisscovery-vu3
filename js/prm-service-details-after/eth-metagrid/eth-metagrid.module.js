@@ -15,7 +15,7 @@
 *
 *
 */
-import {ethConfigService} from './eth-config.service';
+import {ethConfigService} from '../../services/eth-config.service';
 import {ethMetagridConfig} from './eth-metagrid.config';
 import {ethMetagridService} from './eth-metagrid.service';
 import {ethMetagridHtml} from './eth-metagrid.html';
