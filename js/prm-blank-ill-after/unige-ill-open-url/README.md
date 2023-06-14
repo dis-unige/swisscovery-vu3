@@ -2,6 +2,9 @@
 
 This module reads [openURL](https://en.wikipedia.org/wiki/OpenURL) parameters appended to a blank ILL URL to autofill inter-library loan (ILL) requests.
 
+![Screenshot of the Primo catalogue showing that openURL parameters in the ILL request URL are passed on to the displayed form.](unige-ill-open-url-display.png)
+
+
 Because of particularities of the SLSP network, ExLibris' ILL Rapido solution is being used to handle network sharing. UNIGE thus has to rely
 on Primo's blank ILL form to handle inter library loan requests without the help of the getIt service to autofill relevant bibliographic
 information. To prevent asking users to enter all this information manually, we are encoding it in openURL parameters when linking to the
@@ -89,8 +92,8 @@ No known issues at this time.
 
 ## Changelog
 
-2023-06-14 [TG] Added documentation.
-2023-04-15 [TG] Released module for internal testing.
+* 2023-06-14 [TG] Added documentation.
+* 2023-04-15 [TG] Released module for internal testing.
 
 ## Credits
 

@@ -62,4 +62,4 @@ hard coded, which needs to be edited according to yours.
 
 ## Changelog
 
-2023-06-14 [TG] Adapted module to UNIGE's context from BiUSI.
+* 2023-06-14 [TG] Adapted module to UNIGE's context from BiUSI.
