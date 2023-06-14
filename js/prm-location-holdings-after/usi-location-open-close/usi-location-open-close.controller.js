@@ -3,6 +3,8 @@ export class usiLocationOpenCloseController {
     constructor( ethConfigService, usiLocationOpenCloseConfig, $element ) {
         console.log("***USI*** usiLocationOpenCloseController.constructor\n\n");
         this.usilocation = {};
+        this.ethConfigService = ethConfigService;
+        this.config = usiLocationOpenCloseConfig;
     }
 
     $onInit() {
@@ -11,8 +13,7 @@ export class usiLocationOpenCloseController {
         }
         try {
             console.log("***USI*** usiLocationOpenCloseController.$onInit\n\n");
-            let openLocations = [ '610800001' ];
-            this.usilocation.isopen = ( openLocations.includes( this.afterCtrl.parentCtrl.currLoc.location.subLocationCode ) ) ? true : false;
+            this.usilocation.isopen = (this.config.closedLocations.includes( this.afterCtrl.parentCtrl.currLoc.location.subLocationCode ) ) ? false : true;
             this.usilocation.isusi = ( this.afterCtrl.parentCtrl.currLoc.location.organization == '41SLSP_UGE' ) ? true : false;
         }
         catch (e) {
