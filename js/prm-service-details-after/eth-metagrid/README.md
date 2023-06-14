@@ -4,7 +4,7 @@ This is a modified version of the module
 [primo-explore-eth-metagrid](https://gitlab.com/ethlibrary/primo-explore-modules/primo-explore-eth-metagrid/-/tree/master/js)
 developed by the ETH Library. You can read more about this module [on its npm page](https://www.npmjs.com/package/primo-explore-eth-metagrid).
 
-The module uses the Swiss linked open data service [Metagrid](https://metagrid.ch/) to display links to selected Metagrid providers for authorities
+The module uses the Swiss linked open data service [Metagrid](https://metagrid.ch/) to display links to selected providers for authorities
 identified on a record.
 
 ![Screenshot of the Primo catalogue showing links to Metagrid resources being displayed below an item's bibliographic data.](unige-metagrid-display.png)
@@ -27,7 +27,7 @@ by the directives to which modules are bound, but you don't have to.
 
 This modules binds to the `prm-service-details-after` Primo directive. To prevent collision with other modules using this directive, 
 a new `eth-metagrid-component` directive is added in [`prm-service-details-after.module.js`](../prm-service-details-after.module.js) to which
-we are binding this module.
+this module is bound.
 
 Alternatively, if you don't have other modules binding to `prm-service-details-after`, you can also modify the code to bind to this directive instead.
 After you do so, make sure to `require` the module's folder and to declare the module in your `main.js` file.
@@ -50,7 +50,7 @@ Alternatively, specify a `whitelist` array to only display selected services:
 
 ```JavaScript
         whitelist:
-            ["bsg", "dodis", "helveticat", "hls-dhs-dss","histoirerurale"]
+            ["bsg", "dodis", "helveticat", "hls-dhs-dss", "histoirerurale"]
 ```
 
 The full list of available Metagrid providers can be found here: [providers.json](https://api.metagrid.ch/providers.json). Use the `slug` value for each

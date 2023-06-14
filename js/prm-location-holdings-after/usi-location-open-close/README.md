@@ -63,3 +63,7 @@ hard coded, which needs to be edited according to yours.
 ## Changelog
 
 * 2023-06-14 [TG] Adapted module to UNIGE's context from BiUSI.
+
+## Credits
+
+[Original Primo module](https://github.com/binde77/41SLSP_USI-BiUSI/tree/master/js/modules/prm-location-holdings-after/usi-location-open-close) from Silvio Bindella (BiUSI). 
