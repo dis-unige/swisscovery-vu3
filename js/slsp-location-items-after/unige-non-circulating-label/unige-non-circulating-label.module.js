@@ -22,13 +22,13 @@ angular
                              // If a user is connected, the loanable status display is correct
                              if (vm.parentCtrl.isLoggedIn()){
                                  // Do nothing for now. Could possibly edit 
-                                 console.log('User is logged in, loanable status display correct.');
+                                 //console.log('User is logged in, loanable status display correct.');
                              }
                              else {                             
                                  // If no user is logged in, Primo displays a "not loanable" status even if this may not be the case.
                                  // Replace that status with a note asking users to log in to get more info.
                              
-                                 console.log('Found some holdings to correct');
+                                 //console.log('Found some holdings to correct');
                              
                                  var itemLocations = vm.parentCtrl.loc.items;
                              
