@@ -7,7 +7,7 @@ If a displayed item belongs to UNIGE, it checks against a list of locations to i
 
 ![Screenshot of the Primo catalogue showing a different message whether an item is on an open shelf or not.](unige-location-open-close-display.png)
 
-Binding: `prm-location-holdings-after/usi-location-open-close-component`
+Binding directive: `prm-location-holdings-after/usi-location-open-close-component`
 
 ## Usage
 

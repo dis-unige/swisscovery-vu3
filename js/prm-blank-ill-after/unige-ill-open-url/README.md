@@ -10,7 +10,7 @@ on Primo's blank ILL form to handle inter library loan requests without the help
 information. To prevent asking users to enter all this information manually, we are encoding it in openURL parameters when linking to the
 blank ILL form.
 
-Binding: `prm-blank-ill-after`
+Binding directive: `prm-blank-ill-after`
 
 ## Usage
 

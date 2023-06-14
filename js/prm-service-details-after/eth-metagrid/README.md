@@ -10,7 +10,7 @@ identified on a record.
 ![Screenshot of the Primo catalogue showing links to Metagrid resources being displayed below an item's bibliographic data.](unige-metagrid-display.png)
 
 
-Binding: `prm-service-details-after/eth-metagrid-component`
+Binding directive: `prm-service-details-after/eth-metagrid-component`
 
 ### Differences with original ETH module
 
