@@ -95,4 +95,9 @@ No known issues at this time.
 
 ## Changelog
 
+* 2023-06-14 [TG] Added documentation.
 * 2023-05-30 [TG] Adapted module to UNIGE's context from ETH.
+
+## Credits
+
+[Original Metagrid Primo module](https://www.npmjs.com/package/primo-explore-eth-metagrid) from Bernd Uttenweiler (ETH Zürich library). Inspiration for using IdRef in lds90 local field from a modified version of the module by Renouvaud (BCU Lausanne).
