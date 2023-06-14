@@ -3587,15 +3587,3 @@ prm-alma-other-members prm-service-button [aria-label="Ordinare fotocopie"] {
 .unige-db-categories li.selected {
     font-weight: bold;
 }
-
-/* Mise en forme de l'affichage selon la localisation */
-prm-location-holdings-after .open-closed-container {
-	display: flex;
-	justify-content: flex-start;
-	align-content: stretch;
-	align-items: center;
-	margin-top: 0.5em;
-}
-prm-location-holdings-after .open-closed-container .open-closed-img {
-    margin-right: 0.5em;
-}

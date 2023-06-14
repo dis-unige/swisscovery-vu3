@@ -5,8 +5,7 @@ developed by the Università della Svizzera Italiana library (BiUSI).
 
 If a displayed item belongs to UNIGE, it checks against a list of locations to identify whether the item is on open or closed stacks:
 
-![Screenshot of the Primo catalogue showing an item on an open shelf](unige-location-display-open.png)
-![Screenshot of the Primo catalogue showing an item on a closed shelf](unige-location-display-closed.png)
+![Screenshot of the Primo catalogue showing a different message whether an item is on an open shelf or not.](unige-location-open-close-display.png)
 
 Binding: `prm-location-holdings-after/usi-location-open-close-component`
 
