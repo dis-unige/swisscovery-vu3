@@ -20,7 +20,7 @@ Accordingly, enabling modules is done in a two-step process:
 
 In `prm-blank-ill-after/index.js`:
 
-```
+```JavaScript
 require('./unige-ill-open-url/unige-ill-open-url.module.js')
 module.exports = 'unigeIllOpenUrl'
 
@@ -28,7 +28,7 @@ module.exports = 'unigeIllOpenUrl'
 
 In `main.js`:
 
-```
+```JavaScript
 import './prm-blank-ill-after';
 
 var app = angular.module('viewCustom', [(...), 'unigeIllOpenUrl']);
@@ -37,7 +37,7 @@ var app = angular.module('viewCustom', [(...), 'unigeIllOpenUrl']);
 
 Alternatively, you can also directly require the module file in your `main.js` (adjust the path to the module accordingly):
 
-```
+```JavaScript
 require('./prm-blank-ill-after/unige-ill-open-url/unige-ill-open-url.module.js')
 
 var app = angular.module('viewCustom', [(...), 'unigeIllOpenUrl']);
@@ -94,4 +94,4 @@ No known issues at this time.
 
 ## Credits
 
-Thanks to [Tamara Marnell](@tmarnell) for help in developing this module!
+Thanks to [Tamara Marnell (@tmarnell)](https://github.com/tmarnell) for help in developing this module!
