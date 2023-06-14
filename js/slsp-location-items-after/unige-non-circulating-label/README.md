@@ -1,6 +1,8 @@
 # Display custom message for non-circulating items
 
-Displayed loan policies in Primo are currently defined by the fulfillment terms of use, which are only available when users are logged in.
+Displayed loan policies in Primo are currently 
+[dependent on fulfillment terms of use](https://knowledge.exlibrisgroup.com/Alma/Knowledge_Articles/Loanable%22_Policy_information_in_Primo_GetIt_tab_-_how_is_it_calculated%3F),
+which are only available when users are logged in.
 Consequently, loan policies are often mistakenly displayed for users that are not logged in. Instead, it would be beneficial for the loan
 policy display to be controlled by item or location policies. 
 This is [a long-expected and heavily requested feature](https://ideas.exlibrisgroup.com/forums/308176-primo/suggestions/36317461-display-item-policy-in-item-record)
