@@ -1,9 +1,12 @@
-# 
+# Display open/closed stacks notice in Primo
 
 This is a modified version of the module [usi-location-open-close](https://github.com/binde77/41SLSP_USI-BiUSI/tree/master/js/modules/prm-location-holdings-after/usi-location-open-close)
 developed by the Università della Svizzera Italiana library (BiUSI).
 
-If a displayed item belongs to UNIGE, it checks against a list of locations to identify whether the item is on open or closed stacks.
+If a displayed item belongs to UNIGE, it checks against a list of locations to identify whether the item is on open or closed stacks:
+
+![Screenshot of the Primo catalogue showing an item on an open shelf](unige-location-display-open.png)
+![Screenshot of the Primo catalogue showing an item on a closed shelf](unige-location-display-closed.png)
 
 Binding: `prm-location-holdings-after/usi-location-open-close-component`
 
@@ -16,8 +19,7 @@ by the directives to which modules are bound, but you don't have to.
 
 This modules binds to the `prm-location-holdings-after` Primo directive. To prevent collision with other modules using this directive, we are adding
 a new `usi-location-open-close-component` directive in [`prm-location-holdings-after.module.js`](../prm-location-holdings-after.module.js) to which
-we are binding this module. In our case, we already had another module (inherited from the SLSP network) utilizing the 
-`prm-location-holdings-after` directive, so we added this module there.
+we are binding this module.
 
 Alternatively, if you don't have other modules binding to `prm-location-holdings-after`, you can also modify the code to bind to this directive instead.
 After you do so, make sure to `require` the module's folder and to declare the module in your `main.js` file.
@@ -51,8 +53,12 @@ DE : Geschlossener Standort
 IT : A scaffale chiuso
 ```
 
+It also requires two icons to be stored in the view's `img` directory. Mind that their URL in `usi-location-open-close.html` has the view ID
+hard coded, which needs to be edited according to yours.
+
 ## Known issues
 
+* The view ID is hard coded in the HTML template file for linking to the icons. It would be good to make this independent of the view ID.
 * Currently the module only works for the first item to be displayed. When navigating a list of results, subsequent results fail to load the module.
 
 ## Changelog
