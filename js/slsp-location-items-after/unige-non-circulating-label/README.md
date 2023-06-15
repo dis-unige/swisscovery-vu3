@@ -75,4 +75,5 @@ No known issues at this time.
 ## Changelog
 
 * 2023-06-14 [TG] Added documentation.
-* 2023-05-24 [TG] Released module for internal testing.
+* 2023-05-12 Pushed to production
+* 2023-04-27 [TG] Released module for internal testing.

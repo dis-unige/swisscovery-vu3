@@ -96,7 +96,8 @@ No known issues at this time.
 ## Changelog
 
 * 2023-06-14 [TG] Added documentation.
-* 2023-05-30 [TG] Adapted module to UNIGE's context from ETH.
+* 2023-05-12 Pushed to production
+* 2023-05-01 [TG] Adapted module to UNIGE's context from ETH.
 
 ## Credits
 
