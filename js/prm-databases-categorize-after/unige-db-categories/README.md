@@ -54,7 +54,7 @@ var app = angular.module('viewCustom', [(...), 'unigeDbCategories']);
 
 The following parameters can be controlled inside the `unige-db-categories.config.js` file:
 
-* Base search query to be used in the additional links in the `baseurl` string. Mind that the query has to include your library ID.
+* Base search query to be used in the additional links in the `baseurl` string. Mind that the query has to include a search scope that will be different for your library.
 * For which categories the additional links should be displayed.
 * What search codes to use for each category.
 
@@ -65,7 +65,7 @@ are used in the databases list.
 For each category key, you can specify a code for encyclopedias and dictionaries (`enc`) and/or other reference works (`ore`). 
 Only codes explicitely defined here will be displayed.
 
-See below for an example.
+The following sample config corresponds to the entries displayed in the screenshot above.
 
 ```JavaScript
 export const unigeDbCategoriesConfig = {
