@@ -48,8 +48,9 @@ This module has no external dependencies.
 
 ## Known issues
 
-* Links displayed inside the modal overlay (accessed through the "..." menu entry or on mobile screens) are not affected by the module and still redirect to a new window.
+No known issues at this stage.
 
 ## Changelog
 
+* 2023-06-21 [TG] Added second watcher to catch links in the overlay menu too.
 * 2023-05-24 [TG] First version out for testing.

@@ -16,9 +16,31 @@ angular
                             vm.parentCtrl.mainView.forEach((menuItem) => {
                                 menuItem.target = '_self'; 
                             });
-                            console.log(vm.parentCtrl);
+                            
+                            // Add another watcher for the overlay menu
+                            $scope.$watch(
+                                function () {
+                                    if (document.getElementsByClassName('custom-links-container').length > 0){
+                                        // Wait until the overlay menu has been created
+                                        return document.getElementsByClassName('custom-links-container').length;
+                                    }
+                                    return 0;
+                                },
+                                function () {
+                                        // This function is called upon init too. Only process case when the overlay menu has been created
+                                        if (document.getElementsByClassName('custom-links-container').length > 0){
+                                            
+                                            let overlayLinks = document.getElementsByClassName('custom-links-container')[0].children;
+                                            
+                                            for (let i = 0; i < overlayLinks.length; i++) {
+                                                overlayLinks[i].firstElementChild.target = '_self'; 
+                                            }
+                                        }
+                                    }
+                            );
                         }
                 );
+                
             }
     }])
     .component('prmTopNavBarLinksAfter', {
