@@ -1,7 +1,7 @@
 export class usiLocationOpenCloseController {
 
-    constructor( ethConfigService, usiLocationOpenCloseConfig, $element, $scope) {
-        console.log("***USI*** usiLocationOpenCloseController.constructor\n\n");
+    constructor( ethConfigService, usiLocationOpenCloseConfig, $scope) {
+        //console.log("***USI*** usiLocationOpenCloseController.constructor\n\n");
         this.usilocation = {};
         this.ethConfigService = ethConfigService;
         this.config = usiLocationOpenCloseConfig;
@@ -10,7 +10,7 @@ export class usiLocationOpenCloseController {
     
     $onInit(){
         
-        console.log("***USI*** usiLocationOpenCloseController.$onInit\n\n");
+        //console.log("***USI*** usiLocationOpenCloseController.$onInit\n\n");
         var vm = this;
         
         this.$scope.$watch(
@@ -47,4 +47,4 @@ export class usiLocationOpenCloseController {
     }
 }
 
-usiLocationOpenCloseController.$inject = [ 'ethConfigService', 'usiLocationOpenCloseConfig', '$element' , '$scope'];
+usiLocationOpenCloseController.$inject = [ 'ethConfigService', 'usiLocationOpenCloseConfig', '$scope'];
