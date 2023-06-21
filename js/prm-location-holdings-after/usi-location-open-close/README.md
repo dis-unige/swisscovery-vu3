@@ -58,10 +58,10 @@ hard coded, which needs to be edited according to yours.
 ## Known issues
 
 * The view ID is hard coded in the HTML template file for linking to the icons. It would be good to make this independent of the view ID.
-* Currently the module only works for the first item to be displayed. When navigating a list of results, subsequent results fail to load the module.
 
 ## Changelog
 
+* 2023-06-21 [TG] Added watcher to update display when multiple locations are present and when browsing search results.
 * 2023-06-14 [TG] Adapted module to UNIGE's context from BiUSI.
 
 ## Credits
