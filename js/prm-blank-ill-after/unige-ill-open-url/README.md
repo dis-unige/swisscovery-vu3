@@ -49,7 +49,8 @@ var app = angular.module('viewCustom', [(...), 'unigeIllOpenUrl']);
 
 ### Supported openURL parameters and mapping rules
 
-Currently, the following openURL parameters are supported. It is possible to add others by modifying the `param_map` dictionary.
+Currently, the following openUrl [Key/Encoded-Value (KEV)](https://oclc-research.github.io/OpenURL-Frozen/docs/implementation_guidelines/KEV_Guidelines-20041209.pdf) 
+parameters are supported. It is possible to add others by modifying the `param_map` dictionary.
 Additionnally, some parameters have specific mapping rules depending on context.
 
 | Open URL key           | Mapped to form field | Note                                                          |

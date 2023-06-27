@@ -49,6 +49,7 @@ angular
                         if (angular.isDefined(vm.search['rft.genre']) && 
                            (vm.search['rft.genre'] == 'article' || (vm.search['rft.genre'] == 'book' && vm.search['rft.atitle'] != '')) ){
                             request_service.formData['citationType'] = 'CR';
+                            request_service.formData['format'] = 'DIGITAL';
                             request_service.formFields[2].events.onClick();
                         }
                         
