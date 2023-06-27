@@ -22,9 +22,9 @@ angular
                       if (newValue > 0) {
                         var fields = request_service.formFields;
                         // Print all form fields in the console for Thomas to work through
-                        console.log(fields);
+                        //console.log(fields);
                         // Print URL parameters in the console for Thomas to compare to
-                        console.log(vm.search);
+                        //console.log(vm.search);
                         // Map field keys to OpenURL parameters
                         const param_map = {
                             'title': 'rft.title',
@@ -54,7 +54,7 @@ angular
                         }
                         
                         // Set each field value in formData
-                        console.log(request_service.formData);
+                        //console.log(request_service.formData);
                         var openurl_param;
                         angular.forEach(fields, function(field) {
                           if (angular.isDefined(param_map[field.key])) {
