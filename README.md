@@ -13,7 +13,7 @@ Refer to the README inside each of them for more documentation on how they work.
 * [Autofill blank ILL form using openURL parameters](js/prm-blank-ill-after/unige-ill-open-url)
 * [Display linked authority data from the Metagrid service](js/prm-service-details-after/eth-metagrid) (adapted from ETH)
 * [Rebuild category browse menu on databases list](js/prm-databases-categorize-after/unige-db-categories)
-* [Display custom message for non-circulating items](js/slsp-location-items-after/unige-non-circulating-label)
+* [Display custom message for non-circulating items](https://github.com/dis-unige/swisscovery-vu3/tree/50438a3075dba5bc33bbd3e35e08abc70e22d46d/js/slsp-location-items-after/unige-non-circulating-label) - DEPRECATED
 * [Prevent custom main menu links from opening a new window](js/prm-top-nav-bar-links-after/unige-target-blank-fix)
 * [Display open/closed stacks notice in Primo](js/prm-location-holdings-after/usi-location-open-close) (adapted from USI)
 
