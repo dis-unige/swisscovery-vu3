@@ -117,6 +117,8 @@ prm-logo .product-logo {
 }
 
 /* UNIGE location change of send-to section on page */  
+/* Désactivé le 05.07.2023 pour être cohérent avec les autres IZs et remonte la section qui est trop bas après l'ajout de Metagrid */
+/*
 #full-view-container >*:first-child {
     display: flex;
     flex-direction: column;
@@ -124,9 +126,11 @@ prm-logo .product-logo {
 #action_list {
     order: 99 !important;
 }
-
+*/
 
 /* UNIGE location change of send-to section on navigation bar */  
+/* Désactivé le 05.07.2023 pour être cohérent avec les autres IZs et remonte la section qui est trop bas après l'ajout de Metagrid */
+/*
 [aria-label="Send to"] {
     order: 99 !important;
 }
@@ -139,6 +143,8 @@ prm-logo .product-logo {
 [aria-label="Invia a"] {
     order: 99 !important;
 }
+*/
+
 
 /* UNIGE hide non swisscovery scopes on search form menus but display on advanced search */
 
@@ -256,6 +262,7 @@ ul > [ng-repeat='group in $mdAutocompleteCtrl.matches'] > li:nth-child(6) {
     width: 49%;
     padding: 10px;
     position: relative;
+    text-align: center; 
     }
 .unige-alert a {
     color: #000;
@@ -272,6 +279,7 @@ ul > [ng-repeat='group in $mdAutocompleteCtrl.matches'] > li:nth-child(6) {
         width: 90%;
         padding: 10px;
         position: relative;
+        text-align: center;
     }
 }
 
@@ -285,6 +293,7 @@ ul > [ng-repeat='group in $mdAutocompleteCtrl.matches'] > li:nth-child(6) {
         width: 90%;
         padding: 10px;
         position: relative;
+        text-align: center;
     }
 }
 
@@ -298,6 +307,7 @@ ul > [ng-repeat='group in $mdAutocompleteCtrl.matches'] > li:nth-child(6) {
         margin-bottom: 10px;
         padding: 10px;
         position: relative;
+        text-align: center;
     }
 }
 
@@ -449,10 +459,10 @@ prm-service-button > button > span {
 */
 
 /* Temporary alert banner for statistics */
-/* 
+/*
 .unige-alert-2 { 
     display: inline-block; 
-    background: #8dd8d8; 
+    background: #f7e74f; 
     text-align: center; 
     padding: 10px;
     width: 100%; 
@@ -461,9 +471,9 @@ prm-service-button > button > span {
     border-radius: 3px;
     box-shadow: 0 1px 0 0 rgba(0,0,0,.03),0 5px 5px -3px rgba(0,0,0,.07);
     box-sizing: border-box;
-    display: flex;
     flex-direction: column;
-}*/
+}
+*/
 
 /* Code pour masquer le bouton de numérisation pour les autres bibliothèques */
 
@@ -499,30 +509,55 @@ prm-alma-other-members prm-service-button [aria-label="Ordinare fotocopie"] {
   display: none;
 }
 
-
-/* Mise en forme du menu de remplacement dans la page base de données */
-
-.unige-db-categories {
-    width: max-content;
+/* Style pour les liens metagrid */
+.eth-metagrid-poweredby {
+  font-size: small;
 }
 
-.unige-db-categories ul {
-    font-weight: normal;
-    width: 90%;
+.eth-metagrid-links{
+    margin-top: 2.5em;
 }
 
-.unige-db-categories li.selected {
-    font-weight: bold;
+/* Style pour les boutons de gélocalisation */
+prm-stack-map .md-button.button-link {
+    background: #d80669 !important;
+    color: #fffdfd !important;
+    border: none;
 }
 
-/* Mise en forme de l'affichage selon la localisation */
-prm-location-holdings-after .open-closed-container {
-	display: flex;
-	justify-content: flex-start;
-	align-content: stretch;
-	align-items: center;
-	margin-top: 0.5em;
+/* Taille du bouton : pose problème pour les tableaux avec plusieurs localisations
+prm-location prm-stack-map .md-button.button-link {
+    line-height: 16px;
 }
-prm-location-holdings-after .open-closed-container .open-closed-img {
-    margin-right: 0.5em;
+*/
+
+/* Style pour les localisations ouvertes et fermées */
+.open-closed-img img {
+    float: left;
+    margin-right: 10px;
 }
+.unige-open-txt {
+    padding: 0.1em 0px 0px;
+    font-size: 1em;
+    color: green;
+    display: flex;
+    max-width: 400px;
+}
+.unige-closed-txt{
+    padding: 0.1em 0px 0px;
+    font-size: 1em;
+    color: red;
+    display: flex;
+    max-width: 400px;
+}
+
+/* Style pour le menu des catégories pour les DBs */
+#dBcategorize {
+  min-width: 300px;
+}
+
+/* désactiver le label sur les thèmes dans la recherche des revues */
+li[translate='nui.journalsearch.category.option3'] {
+  display: none;
+}
+

@@ -10,16 +10,15 @@
   "author": "Philipp Schulz, SLSP",
   "license": "ISC",
   "devDependencies": {
-    "primo-explore-eth-metagrid": "0.0.3",
+    "slsp-i-button": "1.0.0",
+    "slsp-courier-info": "1.0.0",
+    "slsp-ill-signin-order-alert": "1.0.0",
+    "slsp-edit-personal-details": "1.0.0",
     "prm-locations-after": "1.0.0",
-    "prm-personal-info-after": "1.0.0",
-    "prm-user-area-expandable-after": "1.0.0",
     "slsp-archives-htgi": "1.0.0",
     "slsp-archives-viewit": "1.0.0",
-    "slsp-courier-info": "1.0.0",
-    "slsp-edit-personal-details": "1.0.0",
     "slsp-http-intercept-requests": "1.0.0",
-    "slsp-i-button": "1.0.0",
-    "slsp-ill-signin-order-alert": "1.0.0"
+    "prm-user-area-expandable-after": "1.0.0",
+    "prm-personal-info-after": "1.0.0"
   }
 }

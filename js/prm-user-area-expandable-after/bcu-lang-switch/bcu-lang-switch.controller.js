@@ -9,6 +9,8 @@ export class bcuLangSwitchController {
     $onInit() {
         try {
             this.parentCtrl = this.afterCtrl.parentCtrl;
+            // this.languages = ["de","fr","it","en"];
+            // UNIGE enabled languages : FR and EN only
             this.languages = ["fr","en"];
             if (!this.languages.includes(this.parentCtrl.lang)) {
                 this.changeLanguage("en");
