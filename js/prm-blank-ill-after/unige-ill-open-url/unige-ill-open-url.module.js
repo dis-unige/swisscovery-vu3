@@ -21,10 +21,7 @@ angular
                     function (newValue, oldValue) {
                       if (newValue > 0) {
                         var fields = request_service.formFields;
-                        // Print all form fields in the console for Thomas to work through
-                        //console.log(fields);
-                        // Print URL parameters in the console for Thomas to compare to
-                        //console.log(vm.search);
+
                         // Map field keys to OpenURL parameters
                         const param_map = {
                             'title': 'rft.title',
@@ -140,6 +137,10 @@ angular
                             }
                         }
                         
+                        // Make the pickup library a mandatory field
+                        if (angular.isDefined(request_service.formFields[42])){
+                            request_service.formFields[42].mandatory = true;
+                        }
                       }
                     }
                   );
