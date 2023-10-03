@@ -18,7 +18,10 @@ angular
                              var itemLocations = vm.parentCtrl.loc.items;
                              for(var i = 0; i < itemLocations.length; i++){
                                  // Remove the first 3 charachters from the loan policy display (internal codes)
-                                 itemLocations[i].itemFields[3] = itemLocations[i].itemFields[3].substring(3);
+                                 // if they are indeed numerical only
+                                 if(itemLocations[i].itemFields[3].match(/^\d{2}\s/)){
+                                     itemLocations[i].itemFields[3] = itemLocations[i].itemFields[3].substring(3);
+                                 }
                              }
                          }
                     }
