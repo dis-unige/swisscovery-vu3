@@ -10,6 +10,9 @@ on Primo's blank ILL form to handle inter library loan requests without the help
 information. To prevent asking users to enter all this information manually, we are encoding it in openURL parameters when linking to the
 blank ILL form.
 
+This module also fixes what looks to be a typo in the Primo code that fails to make the pickup library drop down a mandatory
+input field.
+
 Binding directive: `prm-blank-ill-after`
 
 ## Usage
@@ -93,6 +96,7 @@ No known issues at this time.
 
 ## Changelog
 
+* 2023-10-03 [TG] Made pickup location a required field.
 * 2023-06-14 [TG] Added documentation.
 * 2023-05-12 Pushed to production
 * 2023-04-15 [TG] Released module for internal testing.
