@@ -138,8 +138,10 @@ angular
                         }
                         
                         // Make the pickup library a mandatory field
-                        if (angular.isDefined(request_service.formFields[42])){
-                            request_service.formFields[42].mandatory = true;
+                        // Find the correct form field from array of dictionaries
+                        let pickupfield = request_service.formFields.find(x => x.key == "pickupLocation");
+                        if (angular.isDefined(pickupfield)){
+                            pickupfield.mandatory = true;
                         }
                       }
                     }
