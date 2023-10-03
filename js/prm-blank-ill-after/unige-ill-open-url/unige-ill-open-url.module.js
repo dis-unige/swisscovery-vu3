@@ -14,12 +14,12 @@ angular
                 $scope.$watch(
                     function () {
                         if (angular.isDefined(request_service.formFields)) {
-                        return request_service.formFields.length;
+                        return request_service.formFields;
                       }
                       return 0;
                     },
-                    function (newValue, oldValue) {
-                      if (newValue > 0) {
+                    function () {
+                      if (angular.isDefined(request_service.formFields)) {
                         var fields = request_service.formFields;
 
                         // Map field keys to OpenURL parameters
