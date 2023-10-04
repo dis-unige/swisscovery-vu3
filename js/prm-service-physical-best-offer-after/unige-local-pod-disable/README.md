@@ -49,6 +49,7 @@ No known issues at this time.
 
 ## Changelog
 
+* 2023-10-04 [TG] Modified code to restore watch functionality and prevent it from constantly running.
 * 2023-09-22 [PI] Added documentation.
 * 2023-09-15 [PI] Pushed to UNIGE production view.
 * 2023-09-15 [PI] Modifications to solve the problem linked to the SWITCH edu-ID login: the submit button comes after the rapido calculations and is not available to apply the modifications.
