@@ -11,7 +11,6 @@ export const unigeLocalPodDisableModule = angular
                     // Watch for the request button in the Rapido ILL box to be defined, this should
                     // mean that the box is ready.
                     if (angular.isDefined(document.querySelector('#get_it_btn_physical'))) {
-                    //if (typeof document.querySelector('#get_it_btn_physical') === "undefined") {
                         return document.querySelector('#get_it_btn_physical');
                     }
                     return 0;
