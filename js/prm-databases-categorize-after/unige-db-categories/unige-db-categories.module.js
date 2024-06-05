@@ -31,9 +31,33 @@ angular
                             let dbRefCodes = unigeDbCategoriesConfig.refcode;
                             let dbRefSearchUrl = unigeDbCategoriesConfig.baseurl;
                             let currentViewId = vm.parentCtrl.$stateParams.vid;
-                            vm.parentCtrl.dbOverrideCategories = [];                   
-                            let baseUrl = $location.$$absUrl.replace(/^(.*)query=[^&]*(\&.*databases=).*/, "$1query=contains,dbcategory$2");
-                            let currentSelection = vm.parentCtrl.dbParamArray;
+                            vm.parentCtrl.dbOverrideCategories = [];        
+                            
+                            // Rebuild the base db search base URL in case we're displaying the menu after a custom search           
+                            let baseUrl = $location.$$absUrl.replace(/^(.*\?).*/,"$1") + 'query=contains,dbcategory,&tab=jsearch_slot';
+                            
+                            if (angular.isDefined(vm.parentCtrl.$stateParams.sortby)){
+                                baseUrl = baseUrl + '&sortby=' + vm.parentCtrl.$stateParams.sortby;
+                            }
+                            if (angular.isDefined(vm.parentCtrl.$stateParams.lang)){
+                                baseUrl = baseUrl + '&lang=' + vm.parentCtrl.$stateParams.lang;
+                            }
+                            if (angular.isDefined(vm.parentCtrl.$stateParams.offset)){
+                                baseUrl = baseUrl + '&offset=' + vm.parentCtrl.$stateParams.offset;
+                            }
+                            baseUrl = baseUrl + '&vid=' + vm.parentCtrl.$stateParams.vid + '&databases=';
+                            
+                            let currentSelection = [];
+                            // If on the original dbsearch page, the currently selected item is present in the dbParamArray object
+                            if (angular.isDefined(vm.parentCtrl.dbParamArray)){
+                                currentSelection = vm.parentCtrl.dbParamArray;
+                            }
+                            // Otherwise we're passing it through the dbCustomSearch URI parameter
+                            else {
+                                currentSelection = $location.search().dbCustomSearch.split('─');
+                            }
+                            
+                            
                             vm.parentCtrl.dbCategories.dbcategory.forEach( (originalCategory) => {
                                 
                                     let newMenuEntry = new Object();
@@ -54,12 +78,16 @@ angular
                                     if(angular.isDefined(refWorksLinks)){
                                         if(angular.isDefined(refWorksLinks.enc)){
                                             newMenuEntry.subcategories.push({
-                                                term:encSearchLabel,link:dbRefSearchUrl + refWorksLinks.enc + ',AND&vid=' + currentViewId
+                                                term:encSearchLabel,
+                                                link:dbRefSearchUrl + refWorksLinks.enc + ',AND&vid=' + currentViewId + '&dbCustomSearch=' + encodeURIComponent(newMenuEntry.term) + '─' + encodeURIComponent(encSearchLabel),
+                                                selected:(newMenuEntry.selected == 'selected') && (currentSelection[1] == encSearchLabel) ? 'selected' : false
                                             });
                                         }
                                         if(angular.isDefined(refWorksLinks.ore)){
                                             newMenuEntry.subcategories.push({
-                                                term:oreSearchLabel,link:dbRefSearchUrl + refWorksLinks.ore + ',AND&vid=' + currentViewId
+                                                term:oreSearchLabel,
+                                                link:dbRefSearchUrl + refWorksLinks.ore + ',AND&vid=' + currentViewId + '&dbCustomSearch=' + encodeURIComponent(newMenuEntry.term) + '─' + encodeURIComponent(oreSearchLabel),
+                                                selected:(newMenuEntry.selected == 'selected') && (currentSelection[1] == oreSearchLabel) ? 'selected' : false
                                             });
                                         }
                                     }

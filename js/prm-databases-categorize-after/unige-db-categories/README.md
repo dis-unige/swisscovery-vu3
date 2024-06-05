@@ -69,7 +69,7 @@ The following sample config corresponds to the entries displayed in the screensh
 
 ```JavaScript
 export const unigeDbCategoriesConfig = {
-        baseurl : 'search?pfilter=rtype,exact,books,AND&tab=41SLSP_UGE_MyInst_CI&search_scope=MyInst_and_CI&mode=advanced&offset=0&query=any,contains,',
+        baseurl : 'dbsearch?pfilter=rtype,exact,books,AND&tab=41SLSP_UGE_MyInst_CI&search_scope=MyInst_and_CI&mode=advanced&offset=0&query=any,contains,',
         refcode: {
             'Biologie': {
                 enc: 'ENC_BIO'
@@ -113,4 +113,5 @@ IT : Opere di riferimento
 
 * 2023-06-14 [TG] Added documentation.
 * 2023-05-30 [TG] Released module for internal testing.
+* 2024-06-05 [TG] Integrated custom entries search within the dbsearch page instead of a new page.
 

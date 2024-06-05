@@ -5,7 +5,7 @@
                 <a href="{{category.link}}">{{category.term}}</a>
                 <ul ng-if="category.subcategories.length > 0">
                     <li ng-repeat="subcategory in category.subcategories" ng-class="subcategory.selected">
-                        <a target="_blank" href="{{subcategory.link}}">{{subcategory.term}}</a>
+                        <a href="{{subcategory.link}}">{{subcategory.term}}</a>
                     </li>
                 </ul>
             </li>

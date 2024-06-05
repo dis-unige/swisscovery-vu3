@@ -3946,8 +3946,13 @@ prm-location prm-stack-map .md-button.button-link {
 }
 
 /* Style pour le menu des catégories pour les DBs */
-#dBcategorize {
-  min-width: 300px;
+.unige-db-categories {
+    min-width: 300px;
+    width: fit-content;
+}
+
+.unige-db-categories .selected > a {
+    font-weight: bold;
 }
 
 /* désactiver le label sur les thèmes dans la recherche des revues */
