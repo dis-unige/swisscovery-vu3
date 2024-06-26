@@ -566,3 +566,25 @@ li[translate='nui.journalsearch.category.option3'] {
   display: none;
 }
 
+/* Style pour l'affichage du message d'accès aux resources sous license */
+.bcu-fullview-offcampus {
+    margin-top: 1em;
+    padding: 1em 1em 0.5em;
+    background-color: #ff9900;
+    color: black;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 0px 0px, rgba(0, 0, 0, 0.07) 0px 5px 5px -3px;
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 0px 0px, rgba(0, 0, 0, 0.07) 0px 5px 5px -3px;
+}
+
+.bcu-fullview-offcampus > div {
+  margin-left: 1em;
+}
+
+.bcu-fullview-offcampus a {
+  color: #0030a0;
+}
+
+prm-full-view-service-container .section-body .bcu-online-feedback-mail {
+  margin-top: 1em;
+}
+
