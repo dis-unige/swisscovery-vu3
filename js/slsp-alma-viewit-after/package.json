@@ -1,0 +1,11 @@
+{
+  "name": "slsp-alma-viewit-after",
+  "version": "1.0.0",
+  "description": "",
+  "main": "slsp-alma-viewit-after.module.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Thomas Guignard"
+}
