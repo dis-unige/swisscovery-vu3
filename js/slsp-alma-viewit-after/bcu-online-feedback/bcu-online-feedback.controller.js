@@ -1,7 +1,8 @@
 export class bcuOnlineFeedbackController {
-    constructor(ethConfigService, bcuOnlineFeedbackConfig) {
+    constructor(ethConfigService, unigeUseridService, bcuOnlineFeedbackConfig) {
         this.config = bcuOnlineFeedbackConfig;
         this.ethConfigService = ethConfigService;
+        this.unigeUseridService = unigeUseridService;
     }
 
     $onInit() {
@@ -20,9 +21,7 @@ export class bcuOnlineFeedbackController {
                 return;
             }
             let display = this.afterCtrl.parentCtrl.item.pnx.display;
-            //let token = this.ethConfigService.getDecodedToken();
-            //let ip = token.userIp;
-            let ip = "dummy";
+            let ip = this.unigeUseridService.getUserIp();
             let mmsId = this.afterCtrl.parentCtrl.item.pnx.control.recordid[0];
             let title = '';
             if(display.title && display.title.length > 0){
@@ -85,4 +84,4 @@ URL: ${window.location.href}`;
 }
 
 
-bcuOnlineFeedbackController.$inject = [ 'ethConfigService', 'bcuOnlineFeedbackConfig' ];
+bcuOnlineFeedbackController.$inject = [ 'ethConfigService', 'unigeUseridService', 'bcuOnlineFeedbackConfig' ];
