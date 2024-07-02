@@ -42,4 +42,4 @@ No known issues at this time.
 
 ## Credits
 
-The original [eth-fullview-offcampus-warning module ](https://gitlab.com/ethlibrary/slsp/customization-eth-view/-/tree/master/js/modules/prm-alma-delivery-after/eth-fullview-offcampus-warning) was developed at ETH Zurich. Our version builds on a copy of this module further customized for BCU-Fribourg.
+The original [eth-online-feedback-mail module ](https://gitlab.com/ethlibrary/slsp/customization-eth-view/-/tree/master/js/modules/prm-alma-delivery-after/eth-online-feedback-mail) was developed at ETH Zurich. Our version builds on a copy of this module further customized for BCU-Fribourg.
