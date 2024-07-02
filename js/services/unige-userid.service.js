@@ -69,7 +69,7 @@ export const unigeUseridService = ['jwtHelper', function(jwtHelper){
         getJwt: this.getJwt,
         getDecodedToken: this.getDecodedToken,
         isGuest: this.isGuest,
-		getUserIp: this.getUserIp,
-		isOnCampus: this.isOnCampus
+        getUserIp: this.getUserIp,
+        isOnCampus: this.isOnCampus
     };
 }]

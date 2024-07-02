@@ -18,6 +18,8 @@ Refer to the README inside each of them for more documentation on how they work.
 * [Prevent custom main menu links from opening a new window](js/prm-top-nav-bar-links-after/unige-target-blank-fix)
 * [Display open/closed stacks notice in Primo](js/prm-location-holdings-after/usi-location-open-close) (adapted from USI)
 * [Modifiy the Rapido form for the Geneva POD](js/prm-service-physical-best-offer-after/unige-local-pod-disable)
+* [Off-campus message for subscribed resources](js/slsp-alma-viewit-after/bcu-off-campus) (adapted from ETH and BCU-FR)
+* [E-mail feedback prompt for e-resources access issues](js/slsp-alma-viewit-after/bcu-online-feedback) (adapted from ETH and BCU-FR)
 
 ### Contributors
  * Thomas Guignard (thomas@tgconsulting.ca)
