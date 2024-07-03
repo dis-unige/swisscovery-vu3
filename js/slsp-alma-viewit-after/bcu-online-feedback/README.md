@@ -21,7 +21,7 @@ Following our network practice, at UNIGE we try to keep this folder organized by
 We also defined our own subdirective `bcu-online-feedback` because we have several modules binding to `slsp-alma-viewit-after`.
 Accordingly, the subdirectives and module declaration is done in [`slsp-alma-viewit-after/slsp-alma-viewit-after.module.js`](../slsp-alma-viewit-after.module.js). 
 
-([`slsp-viewit-after`](https://github.com/Swiss-Library-Service-Platform/swisscovery/blob/main/41SLSP_NETWORK-VU1_UNION/js/slsp-archives-viewit/js/slsp-archives-viewit.module.js) is itself a custom directive defined by the SLSP network package to which UNIGE is part of.
+[`slsp-viewit-after`](https://github.com/Swiss-Library-Service-Platform/swisscovery/blob/main/41SLSP_NETWORK-VU1_UNION/js/slsp-archives-viewit/js/slsp-archives-viewit.module.js) is itself a custom directive defined by the SLSP network package to which UNIGE is part of.
 If you want to use this module outside of SLSP, you will need to edit it so it binds to `prm-alma-viewit-after` instead.
 
 ### Edit configuration file
