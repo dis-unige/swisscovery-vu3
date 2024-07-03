@@ -28,6 +28,16 @@ If you want to use this module outside of SLSP, you will need to edit it so it b
 
 The text that is displayed by the module is defined in [`bcu-online-feedback.config.js`](bcu-online-feedback.config.js).
 
+### Edit CSS
+
+The following CSS code should be added to your custom.css (or equivalent). Edit as required.
+
+```CSS
+prm-full-view-service-container .section-body .bcu-online-feedback-mail {
+  margin-top: 1em;
+}
+```
+
 ### Dependencies
 
 This module requires the [eth-config](../../services/eth-config.service.js) and [unige-userid](../../services/unige-userid.service.js)

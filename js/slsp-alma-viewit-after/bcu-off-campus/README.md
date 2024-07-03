@@ -49,10 +49,6 @@ The following CSS code should be added to your custom.css (or equivalent). Edit 
 .bcu-fullview-offcampus a {
   color: #0030a0;
 }
-
-prm-full-view-service-container .section-body .bcu-online-feedback-mail {
-  margin-top: 1em;
-}
 ```
 
 ### Dependencies
