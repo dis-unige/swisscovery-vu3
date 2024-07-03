@@ -8,7 +8,7 @@ This module displays a warning message to off-campus and non logged-in users whe
 
 ![Screenshot of the Primo catalogue showing a warning message.](bcu-off-campus.png)
 
-Binding directive: `slsp-alma-viewit-after`
+Binding directive: `slsp-alma-viewit-after` ([SLSP custom directive](https://github.com/Swiss-Library-Service-Platform/swisscovery/blob/main/41SLSP_NETWORK-VU1_UNION/js/slsp-archives-viewit/js/slsp-archives-viewit.module.js) inside `prm-alma-viewit-after`).
 
 ## Usage
 
@@ -19,7 +19,10 @@ To enable this module, copy it inside your view's Javascript folder, import it i
 Following our network practice, at UNIGE we try to keep this folder organized by the directives to which modules are bound, but you don't have to. 
 
 We also defined our own subdirective `bcu-off-campus` because we have several modules binding to `slsp-alma-viewit-after`.
-Accordingly, the subdirectives and module declaration is done in [`slsp-alma-viewit-after/slsp-alma-viewit-after.module.js`](../slsp-alma-viewit-after.module.js). 
+Accordingly, the subdirectives and module declaration is done in [`slsp-alma-viewit-after/slsp-alma-viewit-after.module.js`](../slsp-alma-viewit-after.module.js).
+
+([`slsp-viewit-after`](https://github.com/Swiss-Library-Service-Platform/swisscovery/blob/main/41SLSP_NETWORK-VU1_UNION/js/slsp-archives-viewit/js/slsp-archives-viewit.module.js) is itself a custom directive defined by the SLSP network package to which UNIGE is part of.
+If you want to use this module outside of SLSP, you will need to edit it so it binds to `prm-alma-viewit-after` instead.
 
 ### Edit configuration file
 
