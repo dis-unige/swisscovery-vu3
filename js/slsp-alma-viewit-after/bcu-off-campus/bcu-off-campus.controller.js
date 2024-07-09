@@ -30,11 +30,7 @@ export class bcuOffCampusController {
             this.processDoCheck = false;
             return;
         }
-        let aFilteredElectronicServices = delivery.electronicServices.filter( e => {
-            if(e.publicNote && e.publicNote === "Onlinezugriff via World Wide Web"){
-                return true;
-            }
-        })
+        
         if(aFilteredElectronicServices.length > 0){
             this.processDoCheck = false;
             return;

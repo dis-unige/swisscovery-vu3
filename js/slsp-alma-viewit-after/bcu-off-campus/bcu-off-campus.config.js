@@ -14,10 +14,10 @@ export const bcuOffCampusConfig = function(){
                 it: 'Ulteriori informazioni sull\'uso delle risorse elettroniche'
             },
             offCampusUrl:{
-                de: 'https://www.fr.ch/de/kub/wissenschaftliche-elektronische-ressourcen-der-kantons-und-universitaetsbibliothek',
-                en: 'https://www.fr.ch/bcu/ressources-electroniques-scientifiques-de-la-bibliotheque-cantonale-et-universitaire',
-                fr: 'https://www.fr.ch/bcu/ressources-electroniques-scientifiques-de-la-bibliotheque-cantonale-et-universitaire',
-                it: 'https://www.fr.ch/bcu/ressources-electroniques-scientifiques-de-la-bibliotheque-cantonale-et-universitaire',
+                de: 'https://www.unige.ch/biblio/en/infos/equipment/internet/',
+                en: 'https://www.unige.ch/biblio/en/infos/equipment/internet/',
+                fr: 'https://www.unige.ch/biblio/fr/infos/equipement/internet/',
+                it: 'https://www.unige.ch/biblio/en/infos/equipment/internet/',
             }
         }
     }

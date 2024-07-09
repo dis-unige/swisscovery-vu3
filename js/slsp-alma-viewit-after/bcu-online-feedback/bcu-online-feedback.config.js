@@ -1,6 +1,6 @@
 export const bcuOnlineFeedbackConfig = function(){
     return {
-        helpdeskEmail: "test@test.com",
+        helpdeskEmail: "ebooks@unige.ch",
         label: {
             linkText: {
                 de: 'Zugriffsproblem melden',
