@@ -64,6 +64,7 @@ No known issues at this time.
 
 ## Changelog
 
+* 2024-07-09 [TG] Removed check for WWW resources labeled in public notes
 * 2024-07-02 [TG] Released module for internal testing.
 
 ## Credits
