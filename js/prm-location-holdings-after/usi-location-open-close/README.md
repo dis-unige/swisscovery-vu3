@@ -25,7 +25,41 @@ After you do so, make sure to `require` the module's folder and to declare the m
 
 ### Edit configuration file
 
-Edit `usi-location-open-close.config.js` according to your needs: list of closed location codes and your library ID.
+Edit `usi-location-open-close.config.js` according to your needs.
+
+Specify your library ID in `libraryId`.
+
+There are two possible ways to define the list of closed location codes. The most straighforward way is to provide them as an array in 
+`closedLocations`:
+
+```JavaScript
+export const usiLocationOpenCloseConfig = function(){
+    return {
+        closedLocations: ['610110000','610110004','610110006'],
+        closedLocationsLabelCode: '',
+        closedLocationsLabelLanguage: '',
+        libraryId: '41SLSP_UGE'
+    }
+}
+```
+
+Alternatively, you can define this value in a custom label in Alma. This can be useful e.g. if you need staff to be able to edit this list
+from time to time without having to edit your view code each time. To use this approach, leave `closedLocations` empty and instead
+provide the label code containing the list of locations in `closedLocationsLabelCode` as well as the language for which your are defining
+the label for in `closedLocationsLabelLanguage`:
+
+```JavaScript
+export const usiLocationOpenCloseConfig = function(){
+    return {
+        closedLocations: [],
+        closedLocationsLabelCode: 'unige.closed.locations.list',
+        closedLocationsLabelLanguage: 'fr',
+        libraryId: '41SLSP_UGE'
+    }
+}
+```
+
+In your custom label, locations need to be separated by a comma (,). They don't need to be individually wrapped in quotes.
 
 ### Dependencies
 
@@ -52,6 +86,9 @@ DE : Geschlossener Standort
 IT : A scaffale chiuso
 ```
 
+Additionnaly, if you're using a custom label to specify the list of closed locations (see previous section), that label needs to 
+be defined as well.
+
 It also requires two icons to be stored in the view's `img` directory. Mind that their URL in `usi-location-open-close.html` has the view ID
 hard coded, which needs to be edited according to yours.
 
@@ -61,6 +98,7 @@ hard coded, which needs to be edited according to yours.
 
 ## Changelog
 
+* 2024-07-09 [TG] Added support for locations list in custom Alma label value.
 * 2023-06-21 [TG] Added watcher to update display when multiple locations are present and when browsing search results.
 * 2023-06-14 [TG] Adapted module to UNIGE's context from BiUSI.
 

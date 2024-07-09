@@ -1,11 +1,12 @@
 export class usiLocationOpenCloseController {
 
-    constructor( ethConfigService, usiLocationOpenCloseConfig, $scope) {
+    constructor( ethConfigService, usiLocationOpenCloseConfig, $scope, $translate) {
         //console.log("***USI*** usiLocationOpenCloseController.constructor\n\n");
         this.usilocation = {};
         this.ethConfigService = ethConfigService;
         this.config = usiLocationOpenCloseConfig;
         this.$scope = $scope;
+        this.$translate = $translate;
     }
     
     $onInit(){
@@ -27,13 +28,34 @@ export class usiLocationOpenCloseController {
 
                 if (angular.isDefined(vm.afterCtrl.parentCtrl.currLoc)){
                     // Prevent the listener from running when the locations list hasn't been defined yet (initial run)
-
                     
                     if ( typeof vm.afterCtrl.parentCtrl.currLoc === "undefined" ) {
                         return;
                     }
+                    // By default, display locations as open unless indicated otherwise
+                    vm.usilocation.isopen = true;
                     try {
-                        vm.usilocation.isopen = (vm.config.closedLocations.includes( vm.afterCtrl.parentCtrl.currLoc.location.subLocationCode ) ) ? false : true;
+                        if (vm.config.closedLocations.length > 0){
+                            // A list of locations is provided in the config file
+                            vm.usilocation.isopen = (vm.config.closedLocations.includes( vm.afterCtrl.parentCtrl.currLoc.location.subLocationCode ) ) ? false : true;
+                        }
+                        else if (angular.isDefined(vm.config.closedLocationsLabelCode) && angular.isDefined(vm.config.closedLocationsLabelLanguage)){
+                            // Get the list via label value
+                            // Store the current language
+                            var currentLanguage = vm.$translate.use();
+                            // Use the specified language to get the list of fields
+                            vm.$translate.use(vm.config.closedLocationsLabelLanguage).then(
+                                vm.$translate(vm.config.closedLocationsLabelCode).then((translation) => {
+                                if (angular.isDefined(translation)){
+                                    let closedLocationsList = translation.split(',');
+                                    vm.usilocation.isopen = (closedLocationsList.includes( vm.afterCtrl.parentCtrl.currLoc.location.subLocationCode ) ) ? false : true;
+                                }
+                            }));
+                            // Reset translation language
+                            vm.$translate.use(currentLanguage);
+                        }
+                        
+                        
                         vm.usilocation.isuge = ( vm.afterCtrl.parentCtrl.currLoc.location.organization == vm.config.libraryId ) ? true : false;
                     }
                     catch (e) {
@@ -47,4 +69,4 @@ export class usiLocationOpenCloseController {
     }
 }
 
-usiLocationOpenCloseController.$inject = [ 'ethConfigService', 'usiLocationOpenCloseConfig', '$scope'];
+usiLocationOpenCloseController.$inject = [ 'ethConfigService', 'usiLocationOpenCloseConfig', '$scope', '$translate'];
