@@ -31,11 +31,6 @@ export class bcuOffCampusController {
             return;
         }
         
-        if(aFilteredElectronicServices.length > 0){
-            this.processDoCheck = false;
-            return;
-        }
-
         this.isOffCampusWarning = this.evaluateIsOffCampusWarning();
         this.processDoCheck = false;
     }
