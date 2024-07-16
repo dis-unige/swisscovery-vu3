@@ -5,8 +5,8 @@ export const slspAlmaViewitAfterModule = angular
     .module('slspAlmaViewitAfterModule', [])
     .component('slspAlmaViewitAfter', {
         bindings: { parentCtrl: '<' },
-        template: `<bcu-online-feedback after-ctrl="$ctrl"></bcu-online-feedback>
-                   <bcu-off-campus after-ctrl="$ctrl"></bcu-off-campus>`
+        template: `<bcu-off-campus after-ctrl="$ctrl"></bcu-off-campus>
+                   <bcu-online-feedback after-ctrl="$ctrl"></bcu-online-feedback>`
     });
 
 slspAlmaViewitAfterModule.requires.push(bcuOnlineFeedbackModule.name);

@@ -13,13 +13,13 @@ export class bcuOnlineFeedbackController {
             //    return;
             //}
             // not for open access
-            if(this.afterCtrl.parentCtrl.item.pnx.addata.openaccess && this.afterCtrl.parentCtrl.item.pnx.addata.openaccess[0] === 'true'){
-                return;
-            }
+            //if(this.afterCtrl.parentCtrl.item.pnx.addata.openaccess && this.afterCtrl.parentCtrl.item.pnx.addata.openaccess[0] === 'true'){
+            //    return;
+            //}
             // not for cdi open access
-            if(this.afterCtrl.parentCtrl.item.pnx.addata.oa && this.afterCtrl.parentCtrl.item.pnx.addata.oa[0] === 'free_for_read'){
-                return;
-            }
+            //if(this.afterCtrl.parentCtrl.item.pnx.addata.oa && this.afterCtrl.parentCtrl.item.pnx.addata.oa[0] === 'free_for_read'){
+            //    return;
+            //}
             let display = this.afterCtrl.parentCtrl.item.pnx.display;
             let ip = this.unigeUseridService.getUserIp();
             let mmsId = this.afterCtrl.parentCtrl.item.pnx.control.recordid[0];
