@@ -1,8 +1,7 @@
 export class bcuOffCampusController {
-    constructor(ethConfigService, unigeUseridService, bcuOffCampusConfig) {
+    constructor(ethConfigService, bcuOffCampusConfig) {
         this.config = bcuOffCampusConfig;
         this.ethConfigService = ethConfigService;
-        this.unigeUseridService = unigeUseridService;
     }
 
     $onInit() {
@@ -26,25 +25,11 @@ export class bcuOffCampusController {
         if(!delivery || !delivery.electronicServices || delivery.electronicServices.length === 0){
             return;
         }
-        if(delivery.deliveryCategory.indexOf('Remote Search Resource') > -1 && delivery.electronicServices[0].ilsApiId.indexOf("cdi_") === -1){
-            this.processDoCheck = false;
-            return;
-        }
         
-        this.isOffCampusWarning = this.evaluateIsOffCampusWarning();
+        this.isOffCampusWarning = true;
         this.processDoCheck = false;
-    }
-
-    evaluateIsOffCampusWarning() {
-        if (!this.unigeUseridService.getDecodedToken()) {
-            return false;
-        }
-        if (this.unigeUseridService.isOnCampus()) {
-            return false;
-        }
-        return true;
     }
 
 }
 
-bcuOffCampusController.$inject = [ 'ethConfigService', 'unigeUseridService', 'bcuOffCampusConfig' ];
+bcuOffCampusController.$inject = [ 'ethConfigService', 'bcuOffCampusConfig' ];

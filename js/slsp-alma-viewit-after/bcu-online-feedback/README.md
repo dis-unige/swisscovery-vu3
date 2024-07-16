@@ -51,6 +51,7 @@ No known issues at this time.
 
 ## Changelog
 
+* 2024-07-16 [TG] Also display on open-access resources.
 * 2024-07-02 [TG] Released module for internal testing.
 
 ## Credits

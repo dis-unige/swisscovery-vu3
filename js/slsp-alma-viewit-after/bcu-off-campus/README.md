@@ -3,8 +3,7 @@
 This is a modified version of the module [eth-fullview-offcampus-warning ](https://gitlab.com/ethlibrary/slsp/customization-eth-view/-/tree/master/js/modules/prm-alma-delivery-after/eth-fullview-offcampus-warning)
 developed by the ETH Library, and further customized by BCU-Fribourg.
 
-This module displays a warning message to off-campus and non logged-in users when presenting restricted access results 
-(i.e. that require a subscription):
+This module displays a warning message when presenting restricted access results (i.e. that require a subscription):
 
 ![Screenshot of the Primo catalogue showing a warning message.](bcu-off-campus.png)
 
@@ -53,8 +52,8 @@ The following CSS code should be added to your custom.css (or equivalent). Edit 
 
 ### Dependencies
 
-This module requires the [eth-config](../../services/eth-config.service.js) and [unige-userid](../../services/unige-userid.service.js)
-services. At UNIGE, we are using these services for multiple modules, 
+This module requires the [eth-config](../../services/eth-config.service.js) service. 
+At UNIGE, we are using these services for multiple modules, 
 so we are keeping a single copy in a dedicated  folder. You can also copy the service files inside this module. Make sure to edit the 
 `require` statement accordingly.
 
@@ -64,6 +63,7 @@ No known issues at this time.
 
 ## Changelog
 
+* 2024-07-16 [TG] Removed check for on-campus or logged-in users since UNIGE doesn't use this functionality
 * 2024-07-09 [TG] Removed check for WWW resources labeled in public notes
 * 2024-07-02 [TG] Released module for internal testing.
 
