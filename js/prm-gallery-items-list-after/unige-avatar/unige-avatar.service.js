@@ -30,20 +30,13 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
                     type: [data.materialtype.toLowerCase()],
                     language: [data.language],
                     title: [data.title],
-                    format: [],
                     identifier: [data.id],
                     creationdate: [data.pubdate],
                     creator: [data.author],
                     publisher: [data.publisher],
                     mms: [data.mmsid],
-                    vertitle: [],
-                    series: [],
-                    genre: [],
                     place: [data.pubplace],
-                    version: [],
-                    lds02: [],
-                    lds11: [],
-                    lds56: []
+                    lds11: [data.author]
                 },
                 control: {
                     sourcerecordid: [data.id],
@@ -72,6 +65,7 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
                 }
             },
             delivery: {
+                deliveryCategory: ["Alma-P"],
                 link: [
                     {
                         '@id': ":_0",
