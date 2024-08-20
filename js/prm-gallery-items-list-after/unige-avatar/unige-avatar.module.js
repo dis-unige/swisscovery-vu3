@@ -1,4 +1,5 @@
 import {unigeAvatarService} from './unige-avatar.service';
+import {unigeAvatarHtml} from './unige-avatar.html';
 
 angular
     .module('unigeAvatar', [])
@@ -10,7 +11,7 @@ angular
                 $scope.$watch(
                     function () {
                         if (angular.isDefined(vm.parentCtrl.collectionId)){
-                            // Wait until the collection description has been rendered before going further
+                            // Wait until the collection object has been rendered before going further
                             return vm.parentCtrl.collectionId;
                         }
                         return 0;
@@ -23,14 +24,14 @@ angular
                             
                             let avatarUrl = currentCollection.description;
                             
-                            
-                            
                             currentCollection.description = "Description générique à modifier";
                             unigeAvatarService.getAvatarData(avatarUrl)
                              .then((data) => {
                                  console.log('Avatar data received, processing...');
-                                 vm.parentCtrl.items = data.map(x=>unigeAvatarService.buildJson(x));
-                                 console.log(vm.parentCtrl.items);
+                                 //vm.parentCtrl.avatarItems = data.map(x=>unigeAvatarService.buildJson(x));
+                                 vm.parentCtrl.avatarItems = data;
+                                 //vm.parentCtrl.totalItems = data.length;
+                                 console.log(vm.parentCtrl.avatarItems);
                              })
                         }
                     }
@@ -40,5 +41,6 @@ angular
     ])
     .component('prmGalleryItemsListAfter', {
         bindings: {parentCtrl: `<`},
-        controller: 'unigeAvatarController'
+        controller: 'unigeAvatarController',
+        template: unigeAvatarHtml
     });

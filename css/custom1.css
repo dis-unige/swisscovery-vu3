@@ -3982,3 +3982,56 @@ prm-full-view-service-container .section-body .bcu-online-feedback-mail {
   margin-top: 1em;
 }
 
+/* Style pour l'affichage des collections provenant du service Avatar */
+
+.unige-avatar-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the space between items */
+    justify-content: center; /* Center items in the container */
+    align-items: stretch; /* Stretch items to the same height */
+}
+
+.unige-avatar-item {
+    flex: 0 1 200px; /* Fixed width for each item */
+    height: 300px; /* Fixed height for each item */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Ensure the content inside is stacked vertically */
+    justify-content: space-between; 
+    background-color: #f0f0f0; 
+    border: 1px solid #ccc; 
+    padding: 16px; 
+}
+
+.unige-avatar-item:hover {
+    background-color: #fff; /* Background color on hover */
+    cursor: pointer;
+}
+
+.unige-avatar-item figure {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* Allow the figure to grow and fill available space */
+}
+
+.unige-avatar-item img {
+    max-width: 100%;
+    max-height: 140px; /* Adjust the max height of the image */
+    object-fit: cover; /* Ensure image fits within its container */
+}
+
+.unige-avatar-item h3 {
+    margin: 8px 0 0 0; /* Add some space around the title */
+    font-size: 1.2em;
+    text-align: center;
+    color: #44707b;
+    font-size: .9em;
+}
+
+.unige-avatar-item p {
+    margin: 8px 0 0 0;
+    text-align: center;
+}

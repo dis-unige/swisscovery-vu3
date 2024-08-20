@@ -1,0 +1,25 @@
+<div>
+    <div>
+        <h2 class="margin-zero">
+            <span translate="nui.colldiscovery.items.title">Exemplaires</span> ({{$parent.$ctrl.avatarItems.length}})
+        </h2>
+    </div>
+    <div class="unige-avatar-gallery">
+        <div class="unige-avatar-item" ng-repeat="item in $parent.$ctrl.avatarItems">
+                    <figure>
+                        <div>
+                            <div>
+                                <img ng-src="{{item.image}}"/>
+                            </div>
+                        </div>
+                    </figure>
+                    <div>
+                        <span>
+                            <span class="tiny-uppercase-text">{{item.materialtype}}</span>
+                        </span>
+                        <h3>{{item.title}}</h3>
+                        <p></p>
+                    </div>
+            </div>
+    </div>
+</div>
