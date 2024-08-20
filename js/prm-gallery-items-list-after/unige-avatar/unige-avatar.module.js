@@ -28,14 +28,15 @@ angular
                             unigeAvatarService.getAvatarData(avatarUrl)
                              .then((data) => {
                                  console.log('Avatar data received, processing...');
-                                 //vm.parentCtrl.avatarItems = data.map(x=>unigeAvatarService.buildJson(x));
-                                 vm.parentCtrl.avatarItems = data;
-                                 //vm.parentCtrl.totalItems = data.length;
+                                 vm.parentCtrl.avatarItems = data.map(x=>unigeAvatarService.buildLinks(x));
                                  console.log(vm.parentCtrl.avatarItems);
                              })
                         }
                     }
                 );
+            };
+            $scope.TestClick = function(){
+                console.log($scope);
             }
         }
     ])

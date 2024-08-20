@@ -5,7 +5,8 @@
         </h2>
     </div>
     <div class="unige-avatar-gallery">
-        <div class="unige-avatar-item" ng-repeat="item in $parent.$ctrl.avatarItems">
+        <div ng-repeat="item in $parent.$ctrl.avatarItems">
+                <a ng-href="{{item.link}}"><div class="unige-avatar-item">
                     <figure>
                         <div>
                             <div>
@@ -20,6 +21,7 @@
                         <h3>{{item.title}}</h3>
                         <p></p>
                     </div>
-            </div>
+                </div></a>
+        </div>
     </div>
 </div>

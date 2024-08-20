@@ -21,6 +21,20 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
             );
     }
     
+    function buildLinks(data){
+        let newdata = data;
+        if (data.url){
+            newdata.link = data.url;
+        }
+        else if (data.mmsid){
+            newdata.link = "/discovery/fulldisplay?vid=41SLSP_UGE:VU3&docid=alma" + data.mmsid;
+        }
+        else {
+            newdata.link = '#';
+        }
+        return newdata;
+    }
+    
     function buildJson(data){
         return {
             pnx: {
@@ -79,6 +93,7 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
     
     return {
         getAvatarData: getAvatarData,
-        buildJson: buildJson
+        buildJson: buildJson,
+        buildLinks: buildLinks
     };
 }]

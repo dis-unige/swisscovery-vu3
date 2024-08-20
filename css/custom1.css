@@ -3989,19 +3989,27 @@ prm-full-view-service-container .section-body .bcu-online-feedback-mail {
     flex-wrap: wrap;
     gap: 16px; /* Adjust the space between items */
     justify-content: center; /* Center items in the container */
-    align-items: stretch; /* Stretch items to the same height */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.unige-avatar-gallery > div {
+    flex: 0 1 200px; /* Fixed width */
+    display: flex;
+    height: 300px; /* Fixed height */
 }
 
 .unige-avatar-item {
-    flex: 0 1 200px; /* Fixed width for each item */
-    height: 300px; /* Fixed height for each item */
-    box-sizing: border-box;
+    flex: 1 1 200px; /* Ensures consistent width across all items */
+    height: 300px; /* Fixed height */
+    width: 200px;
     display: flex;
-    flex-direction: column; /* Ensure the content inside is stacked vertically */
-    justify-content: space-between; 
-    background-color: #f0f0f0; 
-    border: 1px solid #ccc; 
-    padding: 16px; 
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 16px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 .unige-avatar-item:hover {
@@ -4012,23 +4020,23 @@ prm-full-view-service-container .section-body .bcu-online-feedback-mail {
 .unige-avatar-item figure {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
-    flex-grow: 1; /* Allow the figure to grow and fill available space */
+    
 }
 
 .unige-avatar-item img {
     max-width: 100%;
     max-height: 140px; /* Adjust the max height of the image */
-    object-fit: cover; /* Ensure image fits within its container */
+    object-fit: cover; /* Ensure the image fits within its container */
 }
 
 .unige-avatar-item h3 {
-    margin: 8px 0 0 0; /* Add some space around the title */
-    font-size: 1.2em;
+    margin: 8px 0 0 0;
+    font-size: 0.9em;
     text-align: center;
     color: #44707b;
-    font-size: .9em;
 }
 
 .unige-avatar-item p {
