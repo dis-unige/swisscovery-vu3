@@ -23,6 +23,7 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
     
     function buildJson(data){
         return {
+            context: "SP",
             pnx: {
                 display: {
                     source: ["Avatar"],
@@ -46,7 +47,7 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
                 },
                 control: {
                     sourcerecordid: [data.id],
-                    recordid: ['avatar' + data.id],
+                    recordid: ['alma' + data.mmsid],
                     sourcid: 'avatar',
                     originalsourceid: [data.id],
                     sourcesystem: ['Avatar API']
@@ -65,14 +66,20 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
                     title: [data.title],
                     author: [data.author],
                     creationdate: [data.pubdate]
+                },
+                facets: {
+                    frbrgroupid: "dummy"
                 }
             },
             delivery: {
-                link: [{
-                    linkType: 'thumbnail',
-                    linkUrl: data.image,
-                    displayLabel: 'thumbnail'
-                }]
+                link: [
+                    {
+                        '@id': ":_0",
+                        displayLabel: "thumbnail",
+                        linkType: "thumbnail",
+                        linkURL: data.image
+                    }
+                ]
             } 
         };
     }
