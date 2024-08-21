@@ -30,6 +30,7 @@ angular
                              .then((data) => {
                                  console.log('Avatar data received, processing...');
                                  vm.parentCtrl.items = data.map(x=>unigeAvatarService.buildJson(x));
+                                 vm.parentCtrl.totalItems = data.length;
                                  console.log(vm.parentCtrl.items);
                              })
                         }

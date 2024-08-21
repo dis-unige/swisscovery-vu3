@@ -71,7 +71,7 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
                         '@id': ":_0",
                         displayLabel: "thumbnail",
                         linkType: "thumbnail",
-                        linkURL: data.image
+                        linkURL: data.image_proxy
                     }
                 ]
             } 
