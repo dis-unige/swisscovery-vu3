@@ -30,9 +30,9 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
                     type: [data.materialtype.toLowerCase()],
                     language: [data.language],
                     title: [data.title],
-                    identifier: [data.id],
+                    identifier: ["$$CAvatar$$V" + data.id],
                     creationdate: [data.pubdate],
-                    creator: [data.author],
+                    creator: [data.author || " "], // this value can't be null otherwise it breaks the translation function
                     publisher: [data.publisher],
                     mms: [data.mmsid],
                     place: [data.pubplace],
@@ -65,7 +65,7 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
                 }
             },
             delivery: {
-                deliveryCategory: ["Alma-P"],
+                deliveryCategory: [data.format == 'P' ? "Alma-P" : "Alma-E"],
                 link: [
                     {
                         '@id': ":_0",
