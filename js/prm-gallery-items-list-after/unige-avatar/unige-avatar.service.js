@@ -21,6 +21,30 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
             );
     }
     
+    function cleanDescription(description){
+        // This captures both avatar URLs on their own and those that are inside <a> tags
+        const avatarRegex = /<a\s+href="(https:\/\/dis\.unige\.ch\/avatar[^\s">]+)"[^>]*>(.*?)<\/a>|(https:\/\/dis\.unige\.ch\/avatar[^\s">]+)/g;
+        
+        //currentCollection.avatarUrl = currentCollection.description.match(/(https:\/\/dis\.unige\.ch\/avatar\/\S*)/)[0];
+        let regexMatches = description.matchAll(avatarRegex);
+        let avatarUrl = '';
+        let cleanDescription = '';
+        
+        for (let match of regexMatches) {
+            if (match[2]) {
+                console.log(`URL inside <a href>: ${match[1]}`);
+                console.log(`Content inside <a> tag: ${match[2]}`);
+                avatarUrl = match[1];
+                cleanDescription = description.replace('&template=json', '');
+            } else {
+                console.log(`URL on its own: ${match[0]}`);
+                avatarUrl = match[0];
+                cleanDescription = description.replace(avatarUrl,' <a href="' + avatarUrl.replace('&template=json', '') + '">Lien vers Avatar</a>')
+            }
+        }
+        return [avatarUrl, cleanDescription];
+    }
+    
     function buildJson(data){
         return {
             context: "SP",
@@ -80,6 +104,7 @@ export const unigeAvatarService = ['$http', '$sce', function($http, $sce){
     
     return {
         getAvatarData: getAvatarData,
+        cleanDescription: cleanDescription,
         buildJson: buildJson
     };
 }]
